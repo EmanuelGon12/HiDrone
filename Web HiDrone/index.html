@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HiDrone</title>  
+    <link rel="stylesheet" href="./estilo.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <header class="header">
+        <div class="logo">
+            <img src="./Logo Hidrone.jpg" alt="Logo" />
+        </div>
+        <button id="toggleButton" class="toggle-btn">☰</button>
+        <nav id="nav" class="nav">
+            <a href="./index.html">Home</a>
+            <a href="./sobre-nosotros.html">Sobre Nosotros</a>
+            <!-- Submenú Servicios -->
+            <div class="submenu">
+            <a href="#" id="serviciosBtn">Servicios</a>
+            <div class="sub-menu-items" id="serviciosSubmenu">
+                <a href="./limpieza.html">Limpieza</a>
+                <a href="#">Fumigación</a>
+            </div>
+            </div>
+            <a href="#">Contacto</a>
+        </nav>
+    </header>
+
+
+
+
+  <section class="hero-image">
+    <img src="./punta-del-este-3.png" alt="Drones en acción" />
+    <div class="hero-text">
+        <h1>Innovamos la limpieza en Uruguay</h1>
+            <p>Más limpio, más seguro, más rápido</p>
+        </div>
+   </section>
+   
+   <div class="puntos-clave">
+        <div class="punto">
+            <!-- Ícono de drone -->
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M6.504 21h-.006a1.5 1.5 0 0 1-1.177-2.428l.372-.472c.103-.023.201-.053.31-.067A3.847 3.847 0 0 1 6.504 18a3.756 3.756 0 0 1 .51.036l-.908 1.154a.5.5 0 0 0 .083.703.441.441 0 0 0 .703-.083l1.146-1.46a2.042 2.042 0 0 1 .775.634L7.68 20.427a1.492 1.492 0 0 1-1.176.572zM3.252 6.667a1.501 1.501 0 0 0 .416 2.08l.327.218a3.763 3.763 0 0 0 .5.034 3.847 3.847 0 0 0 .503-.033 3.586 3.586 0 0 0 .6-.134l-1.375-.917a.5.5 0 1 1 .554-.832l1.8 1.2a1.674 1.674 0 0 0 .242-.259.851.851 0 0 0 .16-.676L5.33 6.251a1.504 1.504 0 0 0-.842-.25 1.492 1.492 0 0 0-1.237.667zm17.496 11.664a1.501 1.501 0 0 0-.416-2.08l-.327-.218a3.763 3.763 0 0 0-.5-.034 3.847 3.847 0 0 0-.503.033 3.586 3.586 0 0 0-.6.134l1.375.917a.5.5 0 0 1 .139.693.511.511 0 0 1-.693.139l-1.8-1.2a1.67 1.67 0 0 0-.242.259.851.851 0 0 0-.16.676l1.648 1.098a1.538 1.538 0 0 0 2.079-.417zM16.32 4.573l-1.134 1.443a2.042 2.042 0 0 0 .775.633l1.146-1.459a.495.495 0 0 1 .333-.187.484.484 0 0 1 .37.104.5.5 0 0 1 .083.703l-.908 1.154a3.756 3.756 0 0 0 .51.036 3.847 3.847 0 0 0 .503-.033c.108-.014.206-.044.31-.067l.37-.472a1.497 1.497 0 0 0-1.037-2.42c-.021 0-.041-.003-.062-.003a1.514 1.514 0 0 0-.207.004c-.022 0-.045.003-.067.004a1.49 1.49 0 0 0-.985.56zm7.605 12.292a2.853 2.853 0 0 1-.46 2.296 4.563 4.563 0 0 1-3.205 1.79 5.748 5.748 0 0 1-.751.048c-2.133 0-4.04-1.187-4.434-2.864a2.785 2.785 0 0 1 .14-1.69l-1.475-.982a1.85 1.85 0 0 0-2.47.394l-1.206 1.535a3.14 3.14 0 0 1 .86 1.473 2.853 2.853 0 0 1-.46 2.296 4.563 4.563 0 0 1-3.204 1.79 5.748 5.748 0 0 1-.751.048c-2.133 0-4.04-1.187-4.434-2.864a2.853 2.853 0 0 1 .46-2.296 4.563 4.563 0 0 1 3.205-1.79 5.673 5.673 0 0 1 1.549.02l1.299-1.654a1.844 1.844 0 0 0-.426-2.67l-1.677-1.12a5.42 5.42 0 0 1-1.225.325 5.748 5.748 0 0 1-.751.049c-2.133 0-4.04-1.187-4.434-2.864a2.853 2.853 0 0 1 .46-2.296 4.563 4.563 0 0 1 3.205-1.79c2.418-.319 4.745.944 5.185 2.816a2.784 2.784 0 0 1-.14 1.69l1.475.982a1.85 1.85 0 0 0 2.47-.394l1.203-1.532a3.14 3.14 0 0 1-.858-1.476 2.853 2.853 0 0 1 .46-2.296 4.563 4.563 0 0 1 3.205-1.79c2.415-.32 4.745.944 5.185 2.816a2.853 2.853 0 0 1-.46 2.296 4.563 4.563 0 0 1-3.205 1.79 5.748 5.748 0 0 1-.751.048 5.704 5.704 0 0 1-.805-.058l-1.292 1.644a1.844 1.844 0 0 0 .426 2.67l1.677 1.12a5.42 5.42 0 0 1 1.225-.325c2.416-.322 4.745.943 5.185 2.815zm-1.283 1.728a1.845 1.845 0 0 0 .31-1.5c-.29-1.23-1.765-2.094-3.44-2.094a4.76 4.76 0 0 0-.64.043 3.617 3.617 0 0 0-2.514 1.365 1.845 1.845 0 0 0-.31 1.5c.327 1.385 2.155 2.314 4.08 2.051a3.617 3.617 0 0 0 2.514-1.365zM14.048 5.906c.327 1.386 2.151 2.315 4.08 2.052a3.617 3.617 0 0 0 2.514-1.365 1.845 1.845 0 0 0 .31-1.5C20.662 3.864 19.187 3 17.512 3a4.76 4.76 0 0 0-.64.043 3.617 3.617 0 0 0-2.514 1.365 1.845 1.845 0 0 0-.31 1.5zm-8.92 4.052a3.617 3.617 0 0 0 2.514-1.365 1.845 1.845 0 0 0 .31-1.5C7.662 5.864 6.187 5 4.512 5a4.76 4.76 0 0 0-.64.043 3.617 3.617 0 0 0-2.514 1.365 1.845 1.845 0 0 0-.31 1.5c.327 1.385 2.152 2.313 4.08 2.051zm4.824 9.136c-.29-1.23-1.765-2.095-3.44-2.095a4.76 4.76 0 0 0-.64.043 3.617 3.617 0 0 0-2.514 1.365 1.845 1.845 0 0 0-.31 1.5c.327 1.385 2.151 2.313 4.08 2.051a3.617 3.617 0 0 0 2.514-1.365 1.845 1.845 0 0 0 .31-1.5zm4.343-4.463l1.453.969a3.865 3.865 0 0 1 .763-.694l-1.227-.818a2.842 2.842 0 0 1-.659-4.12l1.02-1.299a4.96 4.96 0 0 1-.93-.433L13.516 9.76a2.857 2.857 0 0 1-3.812.61L8.252 9.4a3.866 3.866 0 0 1-.763.694l1.227.818a2.842 2.842 0 0 1 .659 4.12l-1.013 1.29a4.884 4.884 0 0 1 .918.45l1.203-1.532a2.854 2.854 0 0 1 3.812-.61z"></path><path fill="none" d="M0 0h24v24H0z"></path></g></svg>
+            <h4>Operaciones con Drones</h4>
+            <p>Servicios de limpieza y fumigación aérea con tecnología avanzada.</p>
+        </div>
+        <div class="punto">
+            <!-- Ícono de seguridad -->
+            <svg fill="#00a3e9" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" class="icon"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M866.9 169.9L527.1 54.1C523 52.7 517.5 52 512 52s-11 .7-15.1 2.1L157.1 169.9c-8.3 2.8-15.1 12.4-15.1 21.2v482.4c0 8.8 5.7 20.4 12.6 25.9L499.3 968c3.5 2.7 8 4.1 12.6 4.1s9.2-1.4 12.6-4.1l344.7-268.6c6.9-5.4 12.6-17 12.6-25.9V191.1c.2-8.8-6.6-18.3-14.9-21.2zM810 654.3L512 886.5 214 654.3V226.7l298-101.6 298 101.6v427.6zm-405.8-201c-3-4.1-7.8-6.6-13-6.6H336c-6.5 0-10.3 7.4-6.5 12.7l126.4 174a16.1 16.1 0 0 0 26 0l212.6-292.7c3.8-5.3 0-12.7-6.5-12.7h-55.2c-5.1 0-10 2.5-13 6.6L468.9 542.4l-64.7-89.1z"></path> </g></svg>            
+            <h4>Seguridad Garantizada</h4>
+            <p>Protocolos estrictos y certificaciones oficiales en cada servicio.</p>
+        </div>
+        <div class="punto">
+            <!-- Ícono de eficacia -->
+            <svg fill="#00a3e9" viewBox="0 0 200 200" data-name="Layer 1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><title></title><path d="M177.6,80.43a10,10,0,1,0-19.5,4.5,60.76,60.76,0,0,1-6,44.5c-16.5,28.5-53.5,38.5-82,22-28.5-16-38.5-53-22-81.5s53.5-38.5,82-22a9.86,9.86,0,1,0,10-17c-38.5-22.5-87-9.5-109.5,29a80.19,80.19,0,1,0,147,20.5Zm-109.5,11a10.12,10.12,0,0,0-11,17l40,25a10.08,10.08,0,0,0,5.5,1.5,10.44,10.44,0,0,0,8-4l52.5-67.5c3.5-4.5,2.5-10.5-2-14s-10.5-2.5-14,2l-47,60Z"></path></g></svg>
+            <h4>Resultados Efectivos</h4>
+            <p>Servicios que cumplen con los más altos estándares de calidad.</p>
+        </div>
+        <div class="punto">
+            <!-- Ícono de eficacia -->
+            <svg height="200px" width="200px" version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <style type="text/css"> .st0{fill:#00a3e9;} </style> <g> <path class="st0" d="M435.95,287.525c32.51,0,58.87-26.343,58.87-58.853c0-32.51-26.361-58.871-58.87-58.871 c-32.502,0-58.863,26.361-58.863,58.871C377.088,261.182,403.448,287.525,435.95,287.525z"></path> <path class="st0" d="M511.327,344.251c-2.623-15.762-15.652-37.822-25.514-47.677c-1.299-1.306-7.105-1.608-8.673-0.636 c-11.99,7.374-26.074,11.714-41.19,11.714c-15.099,0-29.184-4.34-41.175-11.714c-1.575-0.972-7.373-0.67-8.672,0.636 c-2.757,2.757-5.765,6.427-8.698,10.683c7.935,14.94,14.228,30.81,16.499,44.476c2.27,13.7,1.533,26.67-2.138,38.494 c13.038,4.717,28.673,6.787,44.183,6.787C476.404,397.014,517.804,382.987,511.327,344.251z"></path> <path class="st0" d="M254.487,262.691c52.687,0,95.403-42.716,95.403-95.402c0-52.67-42.716-95.386-95.403-95.386 c-52.678,0-95.378,42.716-95.378,95.386C159.109,219.975,201.808,262.691,254.487,262.691z"></path> <path class="st0" d="M335.269,277.303c-2.07-2.061-11.471-2.588-14.027-1.006c-19.448,11.966-42.271,18.971-66.755,18.971 c-24.466,0-47.3-7.005-66.738-18.971c-2.555-1.583-11.956-1.055-14.026,1.006c-16.021,16.004-37.136,51.782-41.384,77.288 c-10.474,62.826,56.634,85.508,122.148,85.508c65.532,0,132.639-22.682,122.165-85.508 C372.404,329.085,351.289,293.307,335.269,277.303z"></path> <path class="st0" d="M76.049,287.525c32.502,0,58.862-26.343,58.862-58.853c0-32.51-26.36-58.871-58.862-58.871 c-32.511,0-58.871,26.361-58.871,58.871C17.178,261.182,43.538,287.525,76.049,287.525z"></path> <path class="st0" d="M115.094,351.733c2.414-14.353,9.225-31.253,17.764-46.88c-2.38-3.251-4.759-6.083-6.955-8.279 c-1.299-1.306-7.097-1.608-8.672-0.636c-11.991,7.374-26.076,11.714-41.182,11.714c-15.108,0-29.202-4.34-41.183-11.714 c-1.568-0.972-7.382-0.67-8.681,0.636c-9.887,9.854-22.882,31.915-25.514,47.677c-6.468,38.736,34.924,52.762,75.378,52.762 c14.437,0,29.016-1.777,41.459-5.84C113.587,379.108,112.757,365.835,115.094,351.733z"></path> </g> </g></svg>
+            <h4>Equipo Certificado </h4>
+            <p>Nuestro equipo cuenta con las certificaciones y permisos necesarios para operar drones de manera legal y segura.</p>
+        </div>
+    </div>
+
+    <section class="presentacion animado">
+        <div class="presentacion-content">
+            <h1>Innovación en Drones para Fumigación y Limpieza</h1>
+            <p>En HiDrone, la innovación y la excelencia en fumigación y limpieza aérea se unen con tecnología drone de última generación. Nuestros drones alcanzan alturas de más de 150 metros y acceden a áreas difíciles o peligrosas, garantizando resultados eficientes, seguros y respetuosos con el medio ambiente en cultivos y estructuras complejas.</p>
+            <a href="#" class="btn-cta">Conoce Más</a>
+        </div>
+        <div class="presentacion-image">
+            <img src="./Imagen de WhatsApp 2025-07-12 a las 19.43.14_b4691d37.jpg" alt="Dron en acción" />
+        </div>
+    </section>
+
+    
+    <h2 class="titulo-servicios">Nuestros Servicios</h2>
+    <div class="seccion-servicios animado">
+        <!-- Servicio de Limpieza -->
+        <div class="servicio">
+            <img src="./punta-del-este-3.png" alt="Servicio de Limpieza" />
+            <h3>Limpieza</h3>
+            <p>Ofrecemos servicios de limpieza aérea para áreas de difícil acceso, como techos y fachadas, con drones equipados con tecnología avanzada que garantiza una limpieza eficiente y segura.</p>
+            <a href="./limpieza.html" class="boton">Más información</a>
+        </div>
+        <!-- Servicio de Fumigación -->
+        <div class="servicio">
+            <img src="./punta-del-este-3.png" alt="Servicio de Fumigación" />
+            <h3>Fumigación</h3>
+            <p>Utilizamos drones de última generación para realizar fumigaciones agrícolas de manera eficiente, rápida y segura, cubriendo grandes áreas con precisión y minimizando el impacto ambiental.</p>
+            <a href="#" class="boton">Más información</a>
+        </div>
+    </div>
+    
+    <div class="carrusel">
+        <div class="slides">
+            <img src="https://images.unsplash.com/photo-1549924231-f129b911e442?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Foto 1" />
+            <img src="https://images.unsplash.com/photo-1549924231-f129b911e442?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Foto 2" />
+            <img src="https://images.unsplash.com/photo-1549924231-f129b911e442?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Foto 3" />
+        </div>
+        <button class="prev" aria-label="Anterior">&lt;</button>
+        <button class="next" aria-label="Siguiente">&gt;</button>
+    </div>
+
+    
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+            <h4>Sobre Nosotros</h4>
+            <p>Somos una empresa de drones especializada en fumigación y limpieza aérea, comprometidos con la innovación y el cuidado del medio ambiente.</p>
+            </div>
+            <div class="footer-column">
+            <h4>Servicios</h4>
+            <ul>
+                <li>Fumigación con drones</li>
+                <li>Limpieza aérea</li>
+            </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Contacto</h4>
+                <p>Teléfono: +598 94 010 550</p>
+                <p>Email: info@dronesservices.com</p>
+            </div>
+        </div>
+        <div class="footer-copy">
+            <p>&copy; 2025 HiDrone. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
