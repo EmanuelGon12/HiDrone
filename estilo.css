@@ -666,13 +666,18 @@ h2 {
   }
   .quienes-somos-inverso ,.quienes-somos   {
     padding:0%;
-    margin: 0px 90px;
+    margin: 0px 50px;
     font-size: 1rem;
   }
 
   .quienes-somos, .quienes-somos-inverso {
     flex-direction: column;
   }
+
+  .quienes-somos .imagen{
+    margin: 0px 10px;
+  }
+
   .quienes-somos .texto,
   .quienes-somos .imagen, .quienes-somos-inverso.texto,.quienes-somos-inverso.imagen {
     flex: 1 1 100%;
@@ -742,15 +747,8 @@ button.next {
   color: white;
 }
 
-/* Items de servicio */
-.items-limpieza {
-  display: flex;
-  width: 100%;
-  justify-content: space-between; /* Espacios iguales en toda la línea */
-  gap: 20px;
-}
 .item-limpieza {
-  flex: 1 1 600px;
+  flex: 1 1 100%;
   width: 100%;
   padding: 20px;
   border-radius: 10px;
@@ -801,6 +799,7 @@ button.next {
 .contenido {
   flex: 1;
   padding: 20px;
+  text-align: justify;
 }
 .contenido h2 {
   font-size: 3em;
@@ -830,6 +829,9 @@ button.next {
 @media(max-width: 768px) {
   .como-funciona {
     flex-direction: column;
+  }
+  .como-funciona p{
+    font-size: 1rem;
   }
 }
 
@@ -888,10 +890,43 @@ button.next {
 
 /* Responsive para pantallas pequeñas */
 @media(max-width: 768px) {
-  .tres-contenedores {
+  .titulo-limpieza{
+    font-size: 3em;
+    text-align: center;
+  }
+
+  .tres-contenedores p{
     align-items: center;
   }
   .contenedor-limp {
-    width: 40%;
+    height: auto;
+    width: 100%;
+  }
+  /* Hace que la sección de contenedores se apile verticalmente y centrar */
+  .tres-contenedores {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Cada contenedor individual ocupa toda la anchura y con margen inferior para separación */
+  .contenedor-limp {
+    width: 90%; /* ajusta según prefieras */
+    max-width: 1000px; /* para no ser demasiado ancho en pantallas grandes */
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* La imagen se ajusta a su contenedor sin problemas */
+  .imagen-limp img {
+    width: 100%;
+    height: auto; /* ajusta automáticamente */
+    display: block;
+  }
+
+  /* La sección de texto debajo de la imagen ocupa toda la anchura y se ajusta */
+  .texto-limp {
+    padding: 10px 15px;
   }
 }
