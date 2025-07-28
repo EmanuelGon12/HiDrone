@@ -72,7 +72,7 @@ body {
   border: none;
   color: #fff;
   cursor: pointer;
-  z-index: 50; /* para que esté sobre todo */
+  z-index: 50; /* para que esté todo */
 }
 
 /* Nav en línea en escritorio, alineado a la derecha */
@@ -568,7 +568,6 @@ h2 {
   background-color: #111; /* Fondo gris claro similar */
   padding: 30px;
   padding-left: 100px;
-  
   width: 80%;
   margin-top: 40px;
   margin: 0px auto;
@@ -657,7 +656,7 @@ h2 {
 }
 
 /* Responsive */
-@media(max-width: 768px) {
+@media(max-width: 1568px) {
   .titulo-centro {
     text-align: center;
     font-family: "Raleway";
@@ -783,46 +782,94 @@ button.next {
   width: auto;
 }
 
-/* Estilo general seccion Como Funciona*/
+/* Sección "Cómo Funciona" mejorada */
 .como-funciona {
   display: flex;
   align-items: center;
-  width: 100%;
-  margin: 50px auto;
-  padding: 20px 70px;
-  background: linear-gradient(to right, #f0f0f0, #e0e0f0);
-  border-radius: 10px;
-  gap: 20px;
+  justify-content: space-between;
+  width: 100vw;
+  max-width: 100vw;
+  margin: 60px 0;
+  padding: 40px 0;
+  background: linear-gradient(120deg, #f8fafc 60%, #e0f7fa 100%);
+  border-radius: 0;
+  box-shadow: 0 6px 24px rgba(0,163,233,0.08);
+  gap: 40px;
+  transition: box-shadow 0.3s;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+.como-funciona:hover {
+  box-shadow: 0 12px 36px rgba(0,163,233,0.16);
 }
 
 /* Contenido de texto */
 .contenido {
-  flex: 1;
-  padding: 20px;
-  text-align: justify;
+  flex: 1 1 50%;
+  padding: 20px 30px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .contenido h2 {
-  font-size: 3em;
-  margin-bottom: 15px;
+  font-size: 2.5em;
+  margin-bottom: 18px;
   color: #00a3e9;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px;
 }
 .contenido p {
-  font-size: 1.2em;
-  line-height: 1.6;
-  color: #333;
+  font-size: 1.18em;
+  line-height: 1.7;
+  color: #222;
+  font-family: 'Open Sans', sans-serif;
+  margin-bottom: 0;
 }
 
 /* Imagen grande */
 .imagen {
-  flex: 1;
+  flex: 1 1 50%;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 .imagen img {
-  max-width: 100%;
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  max-width: 95%;
+  max-height: 380px;
+  border-radius: 14px;
+  box-shadow: 0 4px 18px rgba(0,163,233,0.10);
   object-fit: cover;
+  transition: transform 0.3s;
+}
+.imagen img:hover {
+  transform: scale(1.03);
+}
+
+/* Responsive */
+@media (max-width: 1100px) {
+  .como-funciona {
+    flex-direction: column;
+    padding: 30px 0;
+    gap: 24px;
+  }
+  .contenido, .imagen {
+    flex: 1 1 100%;
+    padding: 10px 0;
+    text-align: center;
+  }
+  .contenido h2 {
+    font-size: 2em;
+  }
+  .imagen img {
+    max-width: 100%;
+    max-height: 250px;
+  }
 }
 
 /* Responsive */
@@ -928,5 +975,212 @@ button.next {
   /* La sección de texto debajo de la imagen ocupa toda la anchura y se ajusta */
   .texto-limp {
     padding: 10px 15px;
+  }
+}
+
+
+.hero-f {
+  padding: 50px 20px;
+  text-align: center;
+}
+.hero-f h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+.hero-f p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+}
+
+.how-it-works {
+  padding: 60px 0;
+  background: linear-gradient(120deg, #101820 60%, #00a3e9 100%);
+  text-align: center;
+  border-radius: 0;
+  margin: 60px 0 40px 0;
+  max-width: 100vw;
+  width: 100vw;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.18);
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+.how-it-works h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.4em;
+  margin-bottom: 18px;
+  color: #fff;
+  text-align: center;
+  letter-spacing: 1px;
+}
+.steps {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 80px;
+  margin-top: 30px;
+}
+.step {
+  background: rgba(255,255,255,0.08);
+  padding: 32px 24px 28px 24px;
+  border-radius: 14px;
+  width: 270px;
+  box-shadow: 0 4px 16px rgba(0,163,233,0.08), 0 1.5px 8px rgba(0,0,0,0.10);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.25s, box-shadow 0.25s;
+  position: relative;
+}
+.step:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 8px 32px rgba(0,163,233,0.16), 0 3px 16px rgba(0,0,0,0.13);
+  background: rgba(0,163,233,0.12);
+}
+.step .step-icon {
+  background: #00a3e9;
+  color: #fff;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.2em;
+  margin-bottom: 18px;
+  box-shadow: 0 2px 8px rgba(0,163,233,0.18);
+}
+.step h3 {
+  margin-bottom: 12px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.25em;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 0.5px;
+}
+.step p {
+  font-size: 1.05em;
+  color: #e0e0e0;
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.5;
+}
+
+@media (max-width: 900px) {
+  .steps {
+    gap: 18px;
+  }
+  .step {
+    width: 90vw;
+    max-width: 200px;
+    margin-bottom: 18px;
+  }
+  .how-it-works {
+    padding: 30px 0;
+    
+  }
+}
+
+@media (max-width: 600px) {
+  .steps {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    margin-top: 18px;
+  }
+  .step {
+    width: 98vw;
+    max-width: 99vw;
+    min-width: 0;
+    padding: 18px 8px 16px 8px;
+    font-size: 0.98em;
+  }
+  .step .step-icon {
+    width: 44px;
+    height: 44px;
+    font-size: 1.5em;
+    margin-bottom: 12px;
+  }
+  .step h3 {
+    font-size: 1em;
+    margin-bottom: 8px;
+  }
+  .step p {
+    font-size: 0.95em;
+  }
+}
+
+
+/* Certificaciones Fumigación */
+.certificaciones-fumigacion {
+  background: linear-gradient(120deg, #0a2233 60%, #00a3e9 100%);
+  color: #fff;
+  padding: 60px 20px;
+  border-radius: 18px;
+  margin: 60px auto 40px auto;
+  max-width: 1100px;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.18);
+}
+
+.contenido-certificaciones {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.contenido-certificaciones h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.4em;
+  margin-bottom: 18px;
+  color: #fff;
+  text-align: center;
+}
+
+.contenido-certificaciones p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.15em;
+  margin-bottom: 18px;
+  color: #e0e0e0;
+  text-align: center;
+}
+
+.contenido-certificaciones ul {
+  margin: 25px 0 25px 0;
+  padding-left: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.contenido-certificaciones ul li {
+  background: rgba(255,255,255,0.08);
+  border-left: 5px solid #00a3e9;
+  padding: 12px 18px;
+  border-radius: 7px;
+  font-size: 1.08em;
+  font-family: 'Raleway', sans-serif;
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+
+@media (max-width: 768px) {
+  .certificaciones-fumigacion {
+    padding: 30px 8px;
+    border-radius: 10px;
+    margin: 30px 8px;
+  }
+  .contenido-certificaciones h2 {
+    font-size: 1.5em;
+  }
+  .contenido-certificaciones p {
+    font-size: 1em;
+  }
+  .contenido-certificaciones ul li {
+    font-size: 1em;
+    padding: 10px 12px;
   }
 }
