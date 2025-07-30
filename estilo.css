@@ -790,7 +790,7 @@ button.next {
   width: 100vw;
   max-width: 100vw;
   margin: 60px 0;
-  padding: 40px 0;
+  padding: 40px 20px;
   background: linear-gradient(120deg, #f8fafc 60%, #e0f7fa 100%);
   border-radius: 0;
   box-shadow: 0 6px 24px rgba(0,163,233,0.08);
@@ -855,16 +855,17 @@ button.next {
 @media (max-width: 1100px) {
   .como-funciona {
     flex-direction: column;
-    padding: 30px 0;
+    padding: 30px;
     gap: 24px;
   }
   .contenido, .imagen {
     flex: 1 1 100%;
     padding: 10px 0;
-    text-align: center;
+    text-align: justify;
   }
   .contenido h2 {
     font-size: 2em;
+    text-align: center
   }
   .imagen img {
     max-width: 100%;
@@ -969,6 +970,7 @@ button.next {
   .imagen-limp img {
     width: 100%;
     height: auto; /* ajusta automáticamente */
+    max-height: 300px;
     display: block;
   }
 
@@ -1116,7 +1118,7 @@ button.next {
 
 /* Certificaciones Fumigación */
 .certificaciones-fumigacion {
-  background: linear-gradient(120deg, #0a2233 60%, #00a3e9 100%);
+
   color: #fff;
   padding: 60px 20px;
   border-radius: 18px;
