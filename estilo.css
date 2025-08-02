@@ -117,7 +117,7 @@ body {
   position: absolute;
   top: 10;
   right: 25;
-  background-color: darkgray;
+  background-color: #111;
   min-width: 150px;
   border-radius: 6px;
   margin-top: 5px;
@@ -134,6 +134,7 @@ body {
 .sub-menu-items a {
   padding: 10px;
   color: #fff;
+  font-size: "Raleway";
 }
 .submenu:hover .sub-menu-items,
 #serviciosBtn:focus + .sub-menu-items,
@@ -1186,3 +1187,10 @@ button.next {
     padding: 10px 12px;
   }
 }
+
+.contenedor-limp p{
+  font-family: "Raleway";
+
+}
+
+

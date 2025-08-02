@@ -87,6 +87,18 @@ window.addEventListener('resize', updateCarousel);
 // Iniciar
 updateCarousel();
 
+const targetNode = document.querySelector('.slides'); // id o clase del contenedor
+const config = { childList: true, subtree: true };
+
+const callback = function(mutationsList, observer) {
+  // Cuando detectes cambios, reinicia tu carrusel
+  updateCarousel(); // tu función para inicializar
+};
+
+const obs = new MutationObserver(callback);
+obs.observe(targetNode, config);
+
+
 
 
 
