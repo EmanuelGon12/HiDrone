@@ -3,7 +3,6 @@
   padding: 0;
   box-sizing: border-box;
 }
-
 body {
   margin: 0;
   background-color: #111;
@@ -224,6 +223,7 @@ body {
   background-color: rgba(0, 0, 0, 0.4); /* fondo semitransparente opcional */
   padding: 3rem 4rem;
   border-radius: 40px;
+  max-width: 80vw;
 }
 
 .hero-text h1 {
@@ -800,12 +800,12 @@ button.next {
   font-family: "Raleway";
   justify-content: space-around;
   font-size: 4em;
-
 }
 .descripcion-limpieza {
   margin-bottom: 30px;
-  font-size: 1.5em;
+  font-size: 1.8em;
   color: white;
+  padding: 0 10vw;
 }
 
 .item-limpieza {
@@ -818,7 +818,7 @@ button.next {
 }
 
 .item-limpieza p, .item-limpieza h3{
- font-size: 0.9em;
+ font-size: 1.1em;
  font-family: "Roboto";
 }
 
@@ -844,6 +844,69 @@ button.next {
   width: auto;
 }
 
+/* --- Responsiveness --- */
+@media (max-width: 1200px) {
+  .titulo-limpieza {
+    font-size: 2.8em;
+  }
+  .descripcion-limpieza {
+    font-size: 1.2em;
+  }
+}
+
+@media (max-width: 900px) {
+  .iconos-limpieza {
+    padding: 10px;
+  }
+  .titulo-limpieza {
+    font-size: 2em;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .descripcion-limpieza {
+    font-size: 1em;
+    margin-bottom: 18px;
+  }
+  .item-limpieza {
+    padding: 14px 8px;
+    width: 100%;
+  }
+  .icon-limpieza svg {
+    height: 60px;
+  }
+}
+
+@media (max-width: 600px) {
+  .iconos-limpieza {
+    padding: 4px;
+  }
+  .titulo-limpieza {
+    font-size: 1.3em;
+    padding: 0 4vw;
+  }
+  .descripcion-limpieza {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+  .item-limpieza {
+    padding: 10px 2vw;
+    border-radius: 7px;
+  }
+  .icon-limpieza {
+    font-size: 2em;
+  }
+  .icon-limpieza svg {
+    height: 38px;
+  }
+  .item-limpieza h3 {
+    font-size: 1em;
+  }
+  .item-limpieza p {
+    font-size: 0.85em;
+  }
+}
+
 /* Sección "Cómo Funciona" mejorada */
 .como-funciona {
   display: flex;
@@ -851,7 +914,7 @@ button.next {
   justify-content: space-between;
   width: 100vw;
   max-width: 100vw;
-  margin: 60px 0;
+  margin: 0 0;
   padding: 40px 20px;
   background: linear-gradient(120deg, #f8fafc 60%, #e0f7fa 100%);
   border-radius: 0;
@@ -1254,4 +1317,278 @@ button.next {
 
 }
 
+/* --- Sección Título con Imagen de Fondo --- */
+.titulo-limpieza-seccion {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin-top: 110px;
+}
 
+.titulo-limpieza-fondo {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-image: url('./imagenes/ventanas-vidrio-edificio_53876-42549.avif'); /* o la que elijas */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* 🔹 Animación */
+  opacity: 0;
+  transform: scale(1.08);
+  animation: fadeZoomIn 2.0s ease forwards;
+}
+
+/* 🔹 Efecto de entrada */
+@keyframes fadeZoomIn {
+  0% {
+    opacity: 0;
+    transform: scale(1.08);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.02);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+/* Capa oscura encima para que el texto destaque */
+.titulo-limpieza-fondo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.titulo-limpieza {
+  position: relative;
+  font-size: 4rem;
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  z-index: 1;
+  padding: 0 20px;
+
+  /* 🔹 Degradado elegante en el texto */
+  background-color: white;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0;
+
+  
+  transform: translateY(20px);
+  animation: fadeSlideIn 0.8s ease forwards; 
+  animation-delay: 1s; /* aparece después del fondo */
+}
+
+/* Animación suave del texto */
+@keyframes fadeSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* Adaptación a pantallas chicas */
+@media (max-width: 768px) {
+  .titulo-limpieza-seccion {
+    height: 300px;
+  }
+
+  .titulo-limpieza {
+    font-size: 2.3rem;
+    padding: 0 20px;
+    letter-spacing: 0.8px;
+  }
+}
+
+
+
+/* --- Sección Fumigación con imagen de fondo --- */
+.titulo-fumigacion-seccion {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin-top: 110px;
+}
+
+.titulo-fumigacion-fondo {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-image: url('./imagenes/droneFumigando.avif'); /* 🔹 cambia si querés otra */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  /* 🔹 Animación fondo */
+  opacity: 0;
+  transform: scale(1.08);
+  animation: fadeZoomIn 2.5s ease forwards;
+}
+
+/* Fondo oscuro encima */
+.titulo-fumigacion-fondo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 0;
+}
+
+/* Texto principal */
+.titulo-fumigacion {
+  position: relative;
+  font-size: 4rem;
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+  text-align: center;
+  letter-spacing: 1.5px;
+  background: white;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  
+  z-index: 1;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeSlideIn 1.8s ease forwards;
+  animation-delay: 1s; /* aparece después del fondo */
+}
+
+/* Subtítulo */
+.subtitulo-fumigacion {
+  position: relative;
+  color: #f0f0f0;
+  font-size: 1.4rem;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  z-index: 1;
+  margin-top: 15px;
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeSlideIn 2.2s ease forwards;
+  animation-delay: 1.2s;
+}
+
+/* Animaciones */
+@keyframes fadeZoomIn {
+  0% {
+    opacity: 0;
+    transform: scale(1.08);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.02);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .titulo-fumigacion-seccion {
+    height: 300px;
+  }
+
+  .titulo-fumigacion {
+    font-size: 2.5rem;
+    letter-spacing: 0.8px;
+    /* padding property removed or specify a value if needed */
+  }
+
+  .subtitulo-fumigacion {
+    font-size: 1rem;
+    padding: 0 20px;
+  }
+}
+
+/* --- Botón principal del hero (versión grande) --- */
+.btn-contacto {
+  display: inline-block;
+  margin-top: 28px;
+  padding: 18px 60px;
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+  color: #fff;
+  text-decoration: none;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  border-radius: 50px;
+  box-shadow: 0 6px 20px rgba(0, 162, 255, 0.4);
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 2;
+}
+
+/* Hover con más impacto */
+.btn-contacto:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 10px 30px rgba(0, 162, 255, 0.6);
+  background: linear-gradient(90deg, #009dff, #0046ff);
+}
+
+/* Efecto de pulso sutil */
+@keyframes pulseGlow {
+  0% {
+    box-shadow: 0 0 0 rgba(0, 162, 255, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(0, 162, 255, 0.6);
+  }
+  100% {
+    box-shadow: 0 0 0 rgba(0, 162, 255, 0.3);
+  }
+}
+
+.btn-contacto {
+  animation: pulseGlow 3.5s ease-in-out infinite;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .btn-contacto {
+    font-size: 1.2rem;
+    padding: 16px 40px;
+  }
+}
