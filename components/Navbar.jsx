@@ -24,7 +24,7 @@ export default function Navbar() {
       <div className="logo">
         <Link href="/" onClick={close}>
           <Image
-            src="/Logo Hidrone.jpg"
+            src="/logo2.png"
             alt="Logo HiDrone"
             width={120}
             height={80}
