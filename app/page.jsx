@@ -144,8 +144,8 @@ export default function Home() {
 
       {/* Trabajos Realizados */}
       <section className="trabajos-section" id="trabajos-realizados">
-        <div className="trabajos-header animado">
-          <h2>Trabajos Realizados</h2>
+        {/*<div className="trabajos-header animado">
+          <h2>Que podemos limpiar?</h2>
           <p>Proyectos completados con éxito en todo Uruguay</p>
         </div>
 
@@ -169,7 +169,7 @@ export default function Home() {
               </div>
             </div>
           ))}
-        </div>
+        </div>*/}
 
         {/* Video Section */}
         <div className="video-section animado">
