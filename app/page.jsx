@@ -7,7 +7,7 @@ import Image from 'next/image'
 
 const trabajos = [
   {
-    img: '/imagenes/fachadas-casas-modernas-tempo-smoke-grespaniac-1-683x1024.jpg',
+    img: '/imagenes/fachada-residencial.webp',
     titulo: 'Fachada Residencial',
     desc: 'Limpieza completa de fachada en edificio residencial de Punta del Este.',
     tag: 'Fachadas',
@@ -19,13 +19,13 @@ const trabajos = [
     tag: 'Ventanas',
   },
   {
-    img: '/imagenes/Fixed_Tilt_Solar_panel_at_Canterbury_Municipal_Building_Canterbury_New_Hampshire.jpg',
+    img: '/imagenes/solar-panel.webp',
     titulo: 'Parque Solar',
     desc: 'Limpieza de paneles solares con ósmosis inversa para maximizar eficiencia.',
     tag: 'Paneles Solares',
   },
   {
-    img: '/imagenes/eolico.jpeg',
+    img: '/imagenes/eolico.webp',
     titulo: 'Parque Eólico',
     desc: 'Mantenimiento de aspas de aerogeneradores de forma segura y eficiente.',
     tag: 'Eólico',
@@ -37,7 +37,7 @@ const trabajos = [
     tag: 'Embarcaciones',
   },
   {
-    img: '/imagenes/file_01730700462067.jpg',
+    img: '/imagenes/embarcacion.webp',
     titulo: 'Limpieza Industrial',
     desc: 'Operación de limpieza en estructura industrial de difícil acceso.',
     tag: 'Industrial',
@@ -125,7 +125,7 @@ export default function Home() {
       <div className="seccion-servicios animado">
         <div className="servicio servicio--full">
           <Image
-            src="/imagenes/fotoDrone4.png"
+            src="/imagenes/fotoDrone4.webp"
             alt="Servicio de Limpieza con Drones"
             width={800}
             height={320}

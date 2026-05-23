@@ -29,7 +29,7 @@ export default function SobreNosotros() {
         </div>
         <div className="imagen">
           <Image
-            src="/imagenes/fotoDrone2.png"
+            src="/imagenes/fotoDrone2.webp"
             alt="Drone HiDrone en operación"
             width={600}
             height={400}

@@ -30,7 +30,7 @@ export default function Limpieza() {
           </p>
         </div>
         <div className="imagen">
-          <Image src="/imagenes/file_01730700462067.jpg" alt="Drone en operación" width={600} height={400} loading="lazy" style={{ width: '100%', borderRadius: '12px', maxHeight: '400px', objectFit: 'cover' }} />
+          <Image src="/imagenes/embarcacion.webp" alt="Drone en operación" width={600} height={400} loading="lazy" style={{ width: '100%', borderRadius: '12px', maxHeight: '400px', objectFit: 'cover' }} />
         </div>
       </section>
 
@@ -81,7 +81,7 @@ export default function Limpieza() {
       {/* Ósmosis */}
       <section className="como-funciona animado" style={{ marginTop: '40px' }}>
         <div className="imagen">
-          <Image src="/imagenes/osmosis2.jpg" alt="Ósmosis inversa" width={600} height={400} loading="lazy" style={{ width: '100%', borderRadius: '12px', maxHeight: '400px', objectFit: 'cover' }} />
+          <Image src="/imagenes/osmosis2.webp" alt="Ósmosis inversa" width={600} height={400} loading="lazy" style={{ width: '100%', borderRadius: '12px', maxHeight: '400px', objectFit: 'cover' }} />
         </div>
         <div className="contenido">
           <h2>Ósmosis Inversa</h2>
@@ -95,11 +95,11 @@ export default function Limpieza() {
       <section className="tres-contenedores" id="superficies">
         {[
           { img: '/imagenes/ventanas-vidrio-edificio_53876-42549.avif', titulo: 'Ventanas', desc: 'Nuestros drones son ideales para limpiar ventanas de edificios altos, alcanzando áreas difíciles y peligrosas de manera rápida, segura y eficiente.' },
-          { img: '/imagenes/fachadas-casas-modernas-tempo-smoke-grespaniac-1-683x1024.jpg', titulo: 'Fachadas', desc: 'Nuestros drones mantienen fachadas de edificios de forma ágil y segura, alcanzando zonas altas sin complicaciones.' },
-          { img: '/imagenes/eolico.jpeg', titulo: 'Molinos Eólicos', desc: 'Un dron de limpieza es la opción más eficiente y segura para mantener molinos eólicos, reduciendo riesgos humanos.' },
-          { img: '/imagenes/Fixed_Tilt_Solar_panel_at_Canterbury_Municipal_Building_Canterbury_New_Hampshire.jpg', titulo: 'Paneles Solares', desc: 'Los drones garantizan mayor eficiencia en la producción de energía eliminando suciedad y residuos de los paneles.' },
-          { img: '/imagenes/cruise-1578528_1280.jpg', titulo: 'Cruceros', desc: 'Limpieza rápida y segura de áreas difíciles de alcanzar, manteniendo la higiene sin interrumpir las operaciones.' },
-          { img: '/imagenes/13970387-seat-in-football-field.jpg', titulo: 'Estadios', desc: 'Solución rápida y eficiente para estadios, llegando a áreas de difícil acceso sin necesidad de equipos pesados.' },
+          { img: '/imagenes/fachada-residencial.webp', titulo: 'Fachadas', desc: 'Nuestros drones mantienen fachadas de edificios de forma ágil y segura, alcanzando zonas altas sin complicaciones.' },
+          { img: '/imagenes/eolico.webp', titulo: 'Molinos Eólicos', desc: 'Un dron de limpieza es la opción más eficiente y segura para mantener molinos eólicos, reduciendo riesgos humanos.' },
+          { img: '/imagenes/solar-panel.webp', titulo: 'Paneles Solares', desc: 'Los drones garantizan mayor eficiencia en la producción de energía eliminando suciedad y residuos de los paneles.' },
+          { img: '/imagenes/cruise-1578528_1280.webp', titulo: 'Cruceros', desc: 'Limpieza rápida y segura de áreas difíciles de alcanzar, manteniendo la higiene sin interrumpir las operaciones.' },
+          { img: '/imagenes/estadio.webp', titulo: 'Estadios', desc: 'Solución rápida y eficiente para estadios, llegando a áreas de difícil acceso sin necesidad de equipos pesados.' },
           { img: '/imagenes/lujoso-barco-motor-que-navega-aguas-cristalinas_1135235-2597.avif', titulo: 'Yates', desc: 'Limpieza eficiente de yates, alcanzando zonas exteriores con un acabado impecable en menos tiempo.' },
           { img: '/imagenes/depositphotos_11501233-stock-photo-blank-billboard.jpg', titulo: 'Carteles Publicitarios', desc: 'Limpiamos carteles publicitarios elevados asegurando una apariencia llamativa y libre de suciedad.' },
           { img: '/imagenes/depositphotos_17673207-stock-photo-house-roof.jpg', titulo: 'Techos', desc: 'Limpieza eficiente de techos llegando a zonas difíciles, garantizando una superficie libre de suciedad y residuos.' },
