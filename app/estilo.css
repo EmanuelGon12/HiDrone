@@ -14,13 +14,13 @@ html {
 body {
   background-color: #111;
   color: #fff;
-  font-family: 'Open Sans', Arial, sans-serif;
+  font-family: var(--font-open-sans), Arial, sans-serif;
   overflow-x: hidden;
   line-height: 1.6;
 }
 
 h1, h2 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-montserrat), sans-serif;
   font-weight: 700;
   color: #fff;
   margin-bottom: 16px;
@@ -28,7 +28,7 @@ h1, h2 {
 }
 
 h3, h4 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-montserrat), sans-serif;
   font-weight: 600;
   color: #fff;
   margin-bottom: 10px;
@@ -36,7 +36,7 @@ h3, h4 {
 }
 
 p {
-  font-family: 'Open Sans', sans-serif;
+  font-family: var(--font-open-sans), sans-serif;
   font-size: 14px;
   line-height: 1.65;
   color: #ddd;
@@ -93,7 +93,7 @@ img {
   color: #e0e0e0;
   text-decoration: none;
   padding: 8px 14px;
-  font-family: 'Raleway', sans-serif;
+  font-family: var(--font-raleway), sans-serif;
   font-size: 15px;
   font-weight: 600;
   transition: color 0.3s;
@@ -107,7 +107,7 @@ img {
   width: 0;
   height: 2px;
   background-color: #00a3e9;
-  transition: all 0.35s ease;
+  transition: width 0.35s ease;
   transform: translateX(-50%);
 }
 
@@ -126,8 +126,8 @@ img {
   border-radius: 50px !important;
   color: #fff !important;
   font-weight: 700 !important;
-  font-family: 'Raleway', sans-serif !important;
-  transition: all 0.3s !important;
+  font-family: var(--font-raleway), sans-serif !important;
+  transition: transform 0.3s, opacity 0.3s !important;
   box-shadow: 0 4px 14px rgba(0, 162, 255, 0.3) !important;
 }
 
@@ -177,7 +177,7 @@ img {
 .mobile-menu a {
   padding: 14px 32px;
   color: #e0e0e0;
-  font-family: 'Raleway', sans-serif;
+  font-family: var(--font-raleway), sans-serif;
   font-size: 1.05em;
   font-weight: 600;
   transition: color 0.2s, background 0.2s;
@@ -288,18 +288,20 @@ img {
   padding: 16px 40px;
   background: linear-gradient(90deg, #00c6ff, #0072ff);
   color: #fff;
-  font-family: 'Raleway', sans-serif;
+  font-family: var(--font-raleway), sans-serif;
   font-weight: 700;
   font-size: 1.1rem;
   border-radius: 50px;
   box-shadow: 0 6px 20px rgba(0, 162, 255, 0.4);
-  transition: all 0.3s ease;
-  animation: pulseGlow 3.5s ease-in-out infinite;
+  /* Composited animation: solo transform (GPU-accelerated) */
+  animation: pulseCTA 3.5s ease-in-out infinite;
+  will-change: transform;
   cursor: pointer;
 }
 
 .btn-contacto:hover {
-  transform: translateY(-3px) scale(1.03);
+  animation-play-state: paused;
+  transform: translateY(-3px) scale(1.04);
   box-shadow: 0 10px 30px rgba(0, 162, 255, 0.6);
   background: linear-gradient(90deg, #00b8f8, #0060ee);
 }
@@ -310,6 +312,7 @@ img {
   color: #fff;
   box-shadow: none;
   animation: none;
+  will-change: auto;
 }
 
 .btn-contacto--outline:hover {
@@ -325,16 +328,15 @@ img {
   background-color: #00a3e9;
   color: #fff;
   border-radius: 6px;
-  font-family: 'Raleway', sans-serif;
+  font-family: var(--font-raleway), sans-serif;
   font-weight: 700;
   font-size: 1rem;
-  transition: all 0.3s;
+  transition: transform 0.3s, background-color 0.3s;
 }
 
 .btn-cta:hover {
   background-color: #0080cc;
   transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(0, 163, 233, 0.4);
 }
 
 .btn-cta--ghost {
@@ -354,10 +356,10 @@ img {
   background-color: #00a3e9;
   color: #fff;
   border-radius: 6px;
-  font-family: 'Raleway', sans-serif;
+  font-family: var(--font-raleway), sans-serif;
   font-weight: 600;
   font-size: 1rem;
-  transition: all 0.3s;
+  transition: transform 0.3s, background-color 0.3s;
   margin-top: 8px;
 }
 
@@ -366,9 +368,10 @@ img {
   transform: translateY(-2px);
 }
 
-@keyframes pulseGlow {
-  0%, 100% { box-shadow: 0 6px 20px rgba(0, 162, 255, 0.4); }
-  50% { box-shadow: 0 6px 40px rgba(0, 162, 255, 0.7); }
+/* Composited: solo opacity y transform — sin box-shadow */
+@keyframes pulseCTA {
+  0%, 100% { transform: scale(1); }
+  50%       { transform: scale(1.03); }
 }
 
 /* ============================================================
@@ -406,7 +409,7 @@ img {
 }
 
 .punto h4 {
-  font-family: 'Raleway', sans-serif;
+  font-family: var(--font-raleway), sans-serif;
   font-weight: 700;
   font-size: 17px;
   color: #fff;
@@ -446,7 +449,7 @@ img {
 }
 
 .presentacion-content h1 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-montserrat), sans-serif;
   font-size: 2.1em;
   margin-bottom: 18px;
   color: #111;
@@ -454,7 +457,7 @@ img {
 }
 
 .presentacion-content p {
-  font-family: 'Open Sans', sans-serif;
+  font-family: var(--font-open-sans), sans-serif;
   font-size: 1.05em;
   margin-bottom: 28px;
   line-height: 1.7;
@@ -516,7 +519,7 @@ img {
    ============================================================ */
 .titulo-servicios {
   text-align: center;
-  font-family: 'Raleway', sans-serif;
+  font-family: var(--font-raleway), sans-serif;
   font-size: 2.6em;
   margin-top: 70px;
   margin-bottom: 12px;
@@ -556,7 +559,7 @@ img {
 }
 
 .servicio h3 {
-  font-family: 'Raleway', sans-serif;
+  font-family: var(--font-raleway), sans-serif;
   font-size: 1.55em;
   margin-bottom: 12px;
   color: #fff;
@@ -582,7 +585,7 @@ img {
   padding: 6px 14px;
   border-radius: 20px;
   font-size: 0.85em;
-  font-family: 'Raleway', sans-serif;
+  font-family: var(--font-raleway), sans-serif;
   font-weight: 600;
   border: 1px solid rgba(0, 163, 233, 0.2);
 }
@@ -619,7 +622,7 @@ img {
 }
 
 .trabajos-header h2 {
-  font-family: 'Raleway', sans-serif;
+  font-family: var(--font-raleway), sans-serif;
   font-size: 2.8em;
   color: #fff;
   margin-bottom: 12px;
@@ -684,7 +687,7 @@ img {
   left: 12px;
   background: #00a3e9;
   color: #fff;
-  font-family: 'Raleway', sans-serif;
+  font-family: var(--font-raleway), sans-serif;
   font-weight: 700;
   font-size: 0.75em;
   padding: 4px 12px;
@@ -698,7 +701,7 @@ img {
 }
 
 .trabajo-info h3 {
-  font-family: 'Raleway', sans-serif;
+  font-family: var(--font-raleway), sans-serif;
   font-size: 1.02em;
   font-weight: 700;
   color: #fff;
@@ -720,7 +723,7 @@ img {
 }
 
 .video-section h3 {
-  font-family: 'Raleway', sans-serif;
+  font-family: var(--font-raleway), sans-serif;
   font-size: 1.8em;
   color: #fff;
   margin-bottom: 10px;
@@ -770,7 +773,7 @@ img {
 }
 
 .video-placeholder-text {
-  font-family: 'Raleway', sans-serif;
+  font-family: var(--font-raleway), sans-serif;
   font-size: 1.15em;
   color: #ccc;
   font-weight: 600;
@@ -823,7 +826,7 @@ img {
 }
 
 .cta-strip-content h2 {
-  font-family: 'Raleway', sans-serif;
+  font-family: var(--font-raleway), sans-serif;
   font-size: 2.2em;
   color: #fff;
   margin-bottom: 14px;
@@ -868,7 +871,7 @@ img {
 }
 
 .footer-column h4 {
-  font-family: 'Raleway', sans-serif;
+  font-family: var(--font-raleway), sans-serif;
   font-weight: 700;
   color: #00a3e9;
   margin-bottom: 16px;
@@ -907,7 +910,7 @@ img {
   border-radius: 6px;
   font-size: 0.88em;
   font-weight: 700;
-  font-family: 'Raleway', sans-serif;
+  font-family: var(--font-raleway), sans-serif;
   transition: background 0.3s, transform 0.2s;
 }
 
@@ -930,7 +933,7 @@ img {
    ============================================================ */
 .titulo-centro {
   text-align: center;
-  font-family: 'Raleway', sans-serif;
+  font-family: var(--font-raleway), sans-serif;
   font-size: 2.8rem;
   margin: 48px 0 32px;
   color: #fff;
@@ -953,7 +956,7 @@ img {
 }
 
 .quienes-somos p {
-  font-family: 'Raleway', sans-serif;
+  font-family: var(--font-raleway), sans-serif;
   line-height: 1.75;
   color: #ccc;
   font-size: 1.05em;
@@ -990,7 +993,7 @@ img {
 }
 
 .quienes-somos-inverso p {
-  font-family: 'Raleway', sans-serif;
+  font-family: var(--font-raleway), sans-serif;
   line-height: 1.75;
   color: #ccc;
   font-size: 1.05em;
@@ -1065,7 +1068,7 @@ img {
 }
 
 .valor-item h3 {
-  font-family: 'Raleway', sans-serif;
+  font-family: var(--font-raleway), sans-serif;
   font-size: 1.1em;
   color: #fff;
   margin-bottom: 10px;
@@ -1118,7 +1121,7 @@ img {
   position: relative;
   font-size: 4rem;
   text-align: center;
-  font-family: 'Raleway', sans-serif;
+  font-family: var(--font-raleway), sans-serif;
   font-weight: 800;
   letter-spacing: 1.5px;
   z-index: 1;
@@ -1175,7 +1178,7 @@ img {
   font-size: 2.2em;
   margin-bottom: 16px;
   color: #00a3e9;
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-montserrat), sans-serif;
   font-weight: 700;
 }
 
@@ -1232,7 +1235,7 @@ img {
   margin: 60px auto;
   padding: 0 24px;
   text-align: center;
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-montserrat), sans-serif;
 }
 
 .descripcion-limpieza {
@@ -1277,7 +1280,7 @@ img {
 }
 
 .texto-limp h3 {
-  font-family: 'Raleway', sans-serif;
+  font-family: var(--font-raleway), sans-serif;
   font-size: 1.05em;
   color: #111;
   margin-bottom: 8px;
@@ -1287,7 +1290,7 @@ img {
   font-size: 0.88em;
   color: #444;
   line-height: 1.55;
-  font-family: 'Open Sans', sans-serif;
+  font-family: var(--font-open-sans), sans-serif;
   margin: 0;
 }
 
@@ -1325,7 +1328,7 @@ img {
 }
 
 .how-it-works h2 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-montserrat), sans-serif;
   font-size: 2.2em;
   margin-bottom: 12px;
   color: #fff;
@@ -1372,7 +1375,7 @@ img {
 }
 
 .step h3 {
-  font-family: 'Raleway', sans-serif;
+  font-family: var(--font-raleway), sans-serif;
   font-size: 1.15em;
   font-weight: 700;
   color: #fff;
@@ -1411,7 +1414,7 @@ img {
 }
 
 .contenido-certificaciones h2 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-montserrat), sans-serif;
   font-size: 2em;
   margin-bottom: 18px;
   color: #fff;
@@ -1438,6 +1441,6 @@ img {
   padding: 14px 18px;
   border-radius: 8px;
   font-size: 1em;
-  font-family: 'Raleway', sans-serif;
+  font-family: var(--font-raleway), sans-serif;
   color: #ddd;
 }

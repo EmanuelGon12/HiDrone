@@ -114,6 +114,7 @@ export default function Home() {
             width={600}
             height={400}
             loading="lazy"
+            sizes="(max-width: 900px) 100vw, 50vw"
             style={{ width: '100%', height: 'auto', borderRadius: '12px' }}
           />
         </div>
@@ -129,6 +130,7 @@ export default function Home() {
             width={800}
             height={320}
             loading="lazy"
+            sizes="(max-width: 768px) 100vw, 800px"
             style={{ width: '100%', height: '280px', objectFit: 'cover', borderRadius: '8px', marginBottom: '20px' }}
           />
           <h3>Limpieza con Drones</h3>
@@ -159,6 +161,7 @@ export default function Home() {
                   width={500}
                   height={320}
                   loading="lazy"
+                  sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw"
                   style={{ width: '100%', height: '220px', objectFit: 'cover' }}
                 />
                 <span className="trabajo-tag">{tag}</span>

@@ -1,4 +1,26 @@
 import './estilo.css'
+import { Raleway, Montserrat, Open_Sans } from 'next/font/google'
+
+const raleway = Raleway({
+  subsets: ['latin'],
+  weight: ['400', '600', '800'],
+  variable: '--font-raleway',
+  display: 'swap',
+})
+
+const montserrat = Montserrat({
+  subsets: ['latin'],
+  weight: ['400', '600', '700'],
+  variable: '--font-montserrat',
+  display: 'swap',
+})
+
+const openSans = Open_Sans({
+  subsets: ['latin'],
+  weight: ['400', '600'],
+  variable: '--font-open-sans',
+  display: 'swap',
+})
 
 export const metadata = {
   title: 'HiDrone | Limpieza con Drones en Uruguay',
@@ -27,11 +49,18 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="es">
+    <html
+      lang="es"
+      className={`${raleway.variable} ${montserrat.variable} ${openSans.variable}`}
+    >
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;800&family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
+        {/* Preload LCP hero image */}
+        <link
+          rel="preload"
+          as="image"
+          href="/punta-del-este-3.webp"
+          type="image/webp"
+        />
       </head>
       <body>{children}</body>
     </html>
