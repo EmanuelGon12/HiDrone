@@ -1,3 +1,6 @@
-:HL["/_next/static/chunks/050_3pbtvhxc~.css","style"]
-:HL["https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;800&family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap","style"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"limpieza","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"BHhrOkfvzUydm633nxd2q"}
+:HL["/_next/static/chunks/092wkfk2-.3km.css","style"]
+:HL["/_next/static/media/c825fd02acae0153-s.p.0js52-zd~6bs8.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/cf514f5d0007dafa-s.p.0lok5zj4ubzox.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/e8f2fbee2754df70-s.p.0fzkl03jw-sdz.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/punta-del-este-3.webp","image",{"type":"image/webp"}]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"limpieza","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"zE5naK0xCm2wxICtHOb-d"}
