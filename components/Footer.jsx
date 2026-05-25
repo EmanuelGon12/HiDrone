@@ -33,6 +33,9 @@ export default function Footer() {
       </div>
       <div className="footer-copy">
         <p>&copy; 2026 HiDrone Uruguay. Todos los derechos reservados.</p>
+        <p className="footer-agency">
+          Desarrollado por <a href="https://egency.services" target="_blank" rel="noopener noreferrer">Egency</a>
+        </p>
       </div>
     </footer>
   )
