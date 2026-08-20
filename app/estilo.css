@@ -751,6 +751,15 @@ img {
   display: block;
 }
 
+.lazy-video-wrapper video {
+  width: 100%;
+  height: min(70vh, 600px);
+  border: none;
+  display: block;
+  background: #000;
+  object-fit: contain;
+}
+
 .video-placeholder {
   display: flex;
   flex-direction: column;

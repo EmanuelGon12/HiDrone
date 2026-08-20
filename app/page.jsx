@@ -178,8 +178,7 @@ export default function Home() {
         <div className="video-section animado">
           <h3>Nuestro Trabajo en Acción</h3>
           <p>Mirá cómo operamos nuestros drones en proyectos reales</p>
-          {/* Reemplazá VIDEO_ID con el ID de tu video de YouTube */}
-          <LazyVideo videoId="" title="HiDrone - Limpieza con Drones en Uruguay" />
+          <LazyVideo src="/videoHidrone.mp4" title="HiDrone - Limpieza con Drones en Uruguay" />
         </div>
 
         <div className="trabajos-cta animado">

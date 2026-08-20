@@ -1,12 +1,12 @@
 'use client'
 import { useEffect, useRef, useState } from 'react'
 
-export default function LazyVideo({ videoId, title = 'Video HiDrone' }) {
+export default function LazyVideo({ videoId, src, poster, title = 'Video HiDrone' }) {
   const ref = useRef(null)
   const [loaded, setLoaded] = useState(false)
 
   useEffect(() => {
-    if (!videoId) return
+    if (!videoId && !src) return
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -18,11 +18,20 @@ export default function LazyVideo({ videoId, title = 'Video HiDrone' }) {
     )
     if (ref.current) observer.observe(ref.current)
     return () => observer.disconnect()
-  }, [videoId])
+  }, [videoId, src])
 
   return (
     <div ref={ref} className="lazy-video-wrapper">
-      {loaded && videoId ? (
+      {loaded && src ? (
+        <video
+          src={src}
+          poster={poster}
+          title={title}
+          controls
+          playsInline
+          preload="metadata"
+        />
+      ) : loaded && videoId ? (
         <iframe
           src={`https://www.youtube.com/embed/${videoId}?rel=0&modestbranding=1`}
           title={title}
@@ -39,7 +48,7 @@ export default function LazyVideo({ videoId, title = 'Video HiDrone' }) {
             </svg>
           </div>
           <p className="video-placeholder-text">
-            {videoId ? 'Cargando video...' : 'Video próximamente disponible'}
+            {videoId || src ? 'Cargando video...' : 'Video próximamente disponible'}
           </p>
           <p className="video-placeholder-sub">Seguinos en nuestras redes para ver nuestros trabajos</p>
         </div>
