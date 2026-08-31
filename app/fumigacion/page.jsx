@@ -1,11 +1,14 @@
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import ScrollAnimator from '@/components/ScrollAnimator'
+import TrustBar from '@/components/TrustBar'
+import { WhatsAppIcon } from '@/components/Icons'
 import Image from 'next/image'
 
 export const metadata = {
-  title: 'Fumigación con Drones | HiDrone Uruguay',
-  description: 'Servicio de fumigación aérea con drones en Uruguay. Control de plagas en parques, fachadas y áreas abiertas. Certificados por el Ministerio de Salud Pública.',
+  title: 'Fumigación con Drones en Uruguay | Control de Plagas Aéreo | HiDrone',
+  description: 'Fumigación aérea con drones en Uruguay, certificada por DINACIA y habilitada por el Ministerio de Salud Pública. Control de plagas en parques, fachadas y áreas abiertas.',
+  keywords: 'fumigación con drones Uruguay, control de plagas aéreo, fumigación aérea Uruguay, drones fumigación Ministerio de Salud Pública',
 }
 
 export default function Fumigacion() {
@@ -13,11 +16,12 @@ export default function Fumigacion() {
     <>
       <Navbar />
       <ScrollAnimator />
+      <TrustBar />
 
       {/* Hero */}
       <section className="titulo-fumigacion-seccion">
         <div className="titulo-fumigacion-fondo">
-          <h2 className="titulo-fumigacion">Fumigación con Drones</h2>
+          <h1 className="titulo-fumigacion">Fumigación con Drones en Uruguay</h1>
           <p className="subtitulo-fumigacion">
             Soluciones rápidas, seguras y efectivas para mantener tus espacios libres de plagas.
           </p>
@@ -94,6 +98,18 @@ export default function Fumigacion() {
             <h3>Fachadas</h3>
             <p>La fumigación en fachadas elimina hongos, líquenes y moho que deterioran la apariencia visual de los edificios, preservando su valor estético.</p>
           </div>
+        </div>
+      </section>
+
+      {/* CTA final */}
+      <section className="cta-strip">
+        <div className="cta-strip-content">
+          <h2>¿Necesitás fumigar tu espacio?</h2>
+          <p>Contáctanos hoy y recibí un presupuesto sin compromiso para tu proyecto.</p>
+          <a href="https://wa.me/59894010550" className="btn-contacto" target="_blank" rel="noopener noreferrer">
+            <WhatsAppIcon />
+            Solicitar Presupuesto Gratis
+          </a>
         </div>
       </section>
 

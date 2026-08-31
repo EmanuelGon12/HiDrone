@@ -2,6 +2,9 @@ import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import ScrollAnimator from '@/components/ScrollAnimator'
 import LazyVideo from '@/components/LazyVideo'
+import TrustBar from '@/components/TrustBar'
+import FAQSection from '@/components/FAQSection'
+import { WhatsAppIcon, ArrowIcon } from '@/components/Icons'
 import Link from 'next/link'
 import Image from 'next/image'
 
@@ -49,6 +52,7 @@ export default function Home() {
     <>
       <Navbar />
       <ScrollAnimator />
+      <TrustBar />
 
       {/* Hero */}
       <section className="hero-image">
@@ -61,13 +65,15 @@ export default function Home() {
         />
         <div className="hero-text">
           <h1>Limpieza aérea con drones de última generación</h1>
-          <p>Más limpio, más seguro, más rápido</p>
+          <p>Más limpio, más seguro, más rápido — certificados por DINACIA</p>
           <div className="hero-ctas">
             <a href="https://wa.me/59894010550" className="btn-contacto" target="_blank" rel="noopener noreferrer">
+              <WhatsAppIcon />
               Solicitar Presupuesto
             </a>
             <Link href="/limpieza" className="btn-contacto btn-contacto--outline">
               Ver Servicios
+              <ArrowIcon />
             </Link>
           </div>
         </div>
@@ -100,11 +106,17 @@ export default function Home() {
       {/* Presentación */}
       <section className="presentacion animado">
         <div className="presentacion-content">
-          <h1>Innovación en Limpieza Aérea con Drones</h1>
-          <p>En HiDrone, llevamos la excelencia en limpieza aérea a otro nivel con drones de última generación. Nuestros equipos alcanzan alturas de más de 150 metros y acceden a áreas difíciles o peligrosas, garantizando resultados eficientes, seguros y respetuosos con el medio ambiente.</p>
+          <h2>Innovación en Limpieza Aérea con Drones</h2>
+          <p>En HiDrone, llevamos la excelencia en limpieza aérea a otro nivel con drones de última generación, certificados por DINACIA. Nuestros equipos alcanzan alturas de más de 150 metros y acceden a áreas difíciles o peligrosas, garantizando resultados eficientes, seguros y respetuosos con el medio ambiente.</p>
           <div className="presentacion-ctas">
-            <Link href="/sobre-nosotros" className="btn-cta">Conoce Más</Link>
-            <a href="https://wa.me/59894010550" className="btn-cta btn-cta--ghost" target="_blank" rel="noopener noreferrer">Consultanos</a>
+            <Link href="/sobre-nosotros" className="btn-cta">
+              Conoce Más
+              <ArrowIcon />
+            </Link>
+            <a href="https://wa.me/59894010550" className="btn-cta btn-cta--ghost" target="_blank" rel="noopener noreferrer">
+              <WhatsAppIcon />
+              Consultanos
+            </a>
           </div>
         </div>
         <div className="presentacion-image">
@@ -143,6 +155,30 @@ export default function Home() {
           <Link href="/limpieza" className="boton">Ver detalles del servicio</Link>
         </div>
       </div>
+
+      {/* Beneficios: por qué elegir drones */}
+      <section className="beneficios-section animado">
+        <h2>¿Por qué elegir limpieza con drones?</h2>
+        <p>Frente a los métodos tradicionales de andamios, cuerdas o hidrolavado manual, la limpieza con drones de HiDrone es más rápida, más segura y más cuidadosa con tus superficies.</p>
+        <div className="beneficios-stats">
+          <div className="beneficio-stat">
+            <div className="valor">1.500 m²</div>
+            <div className="etiqueta">limpiados por hora</div>
+          </div>
+          <div className="beneficio-stat">
+            <div className="valor">+150 m</div>
+            <div className="etiqueta">de altura sin andamios ni cuerdas</div>
+          </div>
+          <div className="beneficio-stat">
+            <div className="valor">0</div>
+            <div className="etiqueta">personal expuesto a riesgo en altura</div>
+          </div>
+          <div className="beneficio-stat">
+            <div className="valor">99%</div>
+            <div className="etiqueta">de impurezas eliminadas con ósmosis inversa</div>
+          </div>
+        </div>
+      </section>
 
       {/* Trabajos Realizados */}
       <section className="trabajos-section" id="trabajos-realizados">
@@ -183,10 +219,14 @@ export default function Home() {
 
         <div className="trabajos-cta animado">
           <a href="https://wa.me/59894010550" className="btn-contacto" target="_blank" rel="noopener noreferrer">
+            <WhatsAppIcon />
             Solicitar Presupuesto Gratis
           </a>
         </div>
       </section>
+
+      {/* FAQ */}
+      <FAQSection />
 
       {/* CTA Strip */}
       <section className="cta-strip">
@@ -194,6 +234,7 @@ export default function Home() {
           <h2>¿Listo para ver resultados?</h2>
           <p>Contactanos hoy y recibí un presupuesto sin compromiso para tu proyecto.</p>
           <a href="https://wa.me/59894010550" className="btn-contacto" target="_blank" rel="noopener noreferrer">
+            <WhatsAppIcon />
             Hablar con un especialista
           </a>
         </div>

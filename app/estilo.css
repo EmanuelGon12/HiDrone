@@ -92,9 +92,9 @@ img {
   position: relative;
   color: #e0e0e0;
   text-decoration: none;
-  padding: 8px 14px;
+  padding: 8px 10px;
   font-family: var(--font-raleway), sans-serif;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 600;
   transition: color 0.3s;
 }
@@ -201,7 +201,7 @@ img {
   box-shadow: 0 4px 14px rgba(0, 162, 255, 0.3);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 980px) {
   .toggle-btn {
     display: block;
   }
@@ -284,7 +284,9 @@ img {
    BUTTONS
    ============================================================ */
 .btn-contacto {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
   padding: 16px 40px;
   background: linear-gradient(90deg, #00c6ff, #0072ff);
   color: #fff;
@@ -297,6 +299,12 @@ img {
   animation: pulseCTA 3.5s ease-in-out infinite;
   will-change: transform;
   cursor: pointer;
+}
+
+.btn-contacto svg {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
 }
 
 .btn-contacto:hover {
@@ -323,7 +331,9 @@ img {
 }
 
 .btn-cta {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   padding: 12px 28px;
   background-color: #00a3e9;
   color: #fff;
@@ -332,6 +342,12 @@ img {
   font-weight: 700;
   font-size: 1rem;
   transition: transform 0.3s, background-color 0.3s;
+}
+
+.btn-cta svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
 }
 
 .btn-cta:hover {
@@ -448,7 +464,7 @@ img {
   flex: 1 1 45%;
 }
 
-.presentacion-content h1 {
+.presentacion-content h2 {
   font-family: var(--font-montserrat), sans-serif;
   font-size: 2.1em;
   margin-bottom: 18px;
@@ -503,7 +519,7 @@ img {
     flex: 1 1 100%;
     text-align: center;
   }
-  .presentacion-content h1 {
+  .presentacion-content h2 {
     font-size: 1.7em;
   }
   .presentacion-ctas {
@@ -911,7 +927,9 @@ img {
 }
 
 .footer-whatsapp {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   margin-top: 14px;
   padding: 10px 22px;
   background: #25d366;
@@ -921,6 +939,12 @@ img {
   font-weight: 700;
   font-family: var(--font-raleway), sans-serif;
   transition: background 0.3s, transform 0.2s;
+}
+
+.footer-whatsapp svg {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
 }
 
 .footer-whatsapp:hover {
@@ -1100,7 +1124,6 @@ img {
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  margin-top: 80px;
 }
 
 .titulo-limpieza-fondo {
@@ -1409,6 +1432,84 @@ img {
   }
 }
 
+/* ============================================================
+   FUMIGACIÓN PAGE — Hero
+   ============================================================ */
+.titulo-fumigacion-seccion {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.titulo-fumigacion-fondo {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-image: url('/imagenes/droneFumigando.avif');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: scale(1.06);
+  animation: fadeZoomIn 2s ease forwards;
+  text-align: center;
+  padding: 0 24px;
+}
+
+.titulo-fumigacion-fondo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.titulo-fumigacion {
+  position: relative;
+  font-size: 4rem;
+  font-family: var(--font-raleway), sans-serif;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  z-index: 1;
+  color: #fff;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeSlideIn 0.8s ease forwards;
+  animation-delay: 1s;
+}
+
+.subtitulo-fumigacion {
+  position: relative;
+  z-index: 1;
+  max-width: 560px;
+  font-size: 1.15em;
+  color: #e0e0e0;
+  margin-top: 14px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeSlideIn 0.8s ease forwards;
+  animation-delay: 1.2s;
+}
+
+@media (max-width: 768px) {
+  .titulo-fumigacion-seccion {
+    height: 320px;
+  }
+  .titulo-fumigacion {
+    font-size: 2.2rem;
+  }
+  .subtitulo-fumigacion {
+    font-size: 1em;
+  }
+}
+
 /* Certificaciones */
 .certificaciones-fumigacion {
   color: #fff;
@@ -1452,4 +1553,314 @@ img {
   font-size: 1em;
   font-family: var(--font-raleway), sans-serif;
   color: #ddd;
+}
+
+/* ============================================================
+   TRUST BAR — Certificación DINACIA
+   ============================================================ */
+.trust-bar {
+  margin-top: 80px;
+  background: linear-gradient(90deg, #002a52 0%, #004a8f 55%, #00a3e9 100%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.trust-bar-inner {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 14px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px 28px;
+}
+
+.trust-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+  font-family: var(--font-raleway), sans-serif;
+  font-size: 0.88em;
+  white-space: nowrap;
+}
+
+.trust-item svg {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+  color: #6fe0ff;
+}
+
+.trust-item strong {
+  font-weight: 800;
+}
+
+.trust-divider {
+  width: 1px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.25);
+}
+
+@media (max-width: 900px) {
+  .trust-item {
+    white-space: normal;
+  }
+}
+
+@media (max-width: 768px) {
+  .trust-bar-inner {
+    padding: 12px 16px;
+    gap: 10px 16px;
+  }
+  .trust-item {
+    font-size: 0.8em;
+    flex: 1 1 100%;
+    justify-content: center;
+    text-align: center;
+  }
+  .trust-divider {
+    display: none;
+  }
+}
+
+/* ============================================================
+   BENEFICIOS / STATS — Drones vs método tradicional
+   ============================================================ */
+.beneficios-section {
+  padding: 70px 32px 20px;
+  background: #111;
+  text-align: center;
+}
+
+.beneficios-section h2 {
+  font-family: var(--font-raleway), sans-serif;
+  font-size: 2.2em;
+  margin-bottom: 12px;
+}
+
+.beneficios-section > p {
+  max-width: 640px;
+  margin: 0 auto 44px;
+  color: #999;
+  font-size: 1.05em;
+}
+
+.beneficios-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.beneficio-stat {
+  background: #1a1a1a;
+  border: 1px solid rgba(0, 163, 233, 0.12);
+  border-radius: 14px;
+  padding: 30px 16px;
+  transition: transform 0.3s, border-color 0.3s;
+}
+
+.beneficio-stat:hover {
+  transform: translateY(-5px);
+  border-color: rgba(0, 163, 233, 0.35);
+}
+
+.beneficio-stat .valor {
+  font-family: var(--font-montserrat), sans-serif;
+  font-weight: 800;
+  font-size: 2.1em;
+  color: #00a3e9;
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
+.beneficio-stat .etiqueta {
+  font-family: var(--font-raleway), sans-serif;
+  font-size: 0.92em;
+  color: #ccc;
+  font-weight: 600;
+}
+
+@media (max-width: 900px) {
+  .beneficios-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .beneficios-section {
+    padding: 48px 20px 8px;
+  }
+  .beneficios-section h2 {
+    font-size: 1.7em;
+  }
+}
+
+/* ============================================================
+   FAQ SECTION
+   ============================================================ */
+.faq-section {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 80px 24px;
+}
+
+.faq-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.faq-eyebrow {
+  display: inline-block;
+  color: #00a3e9;
+  font-family: var(--font-raleway), sans-serif;
+  font-weight: 700;
+  font-size: 0.85em;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.faq-header h2 {
+  font-family: var(--font-raleway), sans-serif;
+  font-size: 2.2em;
+  margin-bottom: 10px;
+}
+
+.faq-header p {
+  color: #999;
+  font-size: 1.02em;
+}
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.faq-item {
+  background: #1a1a1a;
+  border: 1px solid rgba(0, 163, 233, 0.12);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: border-color 0.3s;
+}
+
+.faq-item.open {
+  border-color: rgba(0, 163, 233, 0.4);
+}
+
+.faq-question {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 20px 22px;
+  text-align: left;
+  color: #fff;
+  font-family: var(--font-raleway), sans-serif;
+  font-weight: 700;
+  font-size: 1.02em;
+}
+
+.faq-chevron {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  color: #00a3e9;
+  transition: transform 0.3s;
+}
+
+.faq-item.open .faq-chevron {
+  transform: rotate(180deg);
+}
+
+.faq-answer {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.35s ease;
+}
+
+.faq-item.open .faq-answer {
+  grid-template-rows: 1fr;
+}
+
+.faq-answer p {
+  overflow: hidden;
+  padding: 0 22px;
+  color: #aaa;
+  font-size: 0.95em;
+  line-height: 1.7;
+}
+
+.faq-item.open .faq-answer p {
+  padding: 0 22px 22px;
+}
+
+@media (max-width: 600px) {
+  .faq-section {
+    padding: 56px 16px;
+  }
+  .faq-header h2 {
+    font-size: 1.6em;
+  }
+  .faq-question {
+    padding: 16px 18px;
+    font-size: 0.95em;
+  }
+}
+
+/* ============================================================
+   WHATSAPP FLOAT BUTTON
+   ============================================================ */
+.whatsapp-float {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 58px;
+  height: 58px;
+  background: #25d366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+  z-index: 900;
+  animation: whatsappPulse 2.8s ease-in-out infinite;
+  will-change: transform;
+}
+
+.whatsapp-float svg {
+  width: 30px;
+  height: 30px;
+  color: #fff;
+}
+
+.whatsapp-float:hover {
+  animation-play-state: paused;
+  transform: scale(1.08);
+}
+
+@keyframes whatsappPulse {
+  0%, 100% { box-shadow: 0 6px 20px rgba(0,0,0,0.35), 0 0 0 0 rgba(37, 211, 102, 0.5); }
+  50% { box-shadow: 0 6px 20px rgba(0,0,0,0.35), 0 0 0 10px rgba(37, 211, 102, 0); }
+}
+
+@media (max-width: 600px) {
+  .whatsapp-float {
+    bottom: 16px;
+    right: 16px;
+    width: 52px;
+    height: 52px;
+  }
+  .whatsapp-float svg {
+    width: 26px;
+    height: 26px;
+  }
 }

@@ -1,11 +1,14 @@
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import ScrollAnimator from '@/components/ScrollAnimator'
+import TrustBar from '@/components/TrustBar'
+import { WhatsAppIcon } from '@/components/Icons'
 import Image from 'next/image'
 
 export const metadata = {
-  title: 'Limpieza con Drones | HiDrone Uruguay',
-  description: 'Servicio profesional de limpieza aérea con drones en Uruguay. Fachadas, ventanas, paneles solares, techos y más. Tecnología de ósmosis inversa.',
+  title: 'Limpieza con Drones en Uruguay | Fachadas, Vidrios y Paneles Solares | HiDrone',
+  description: 'Limpieza con drones en Uruguay certificada por DINACIA: fachadas, ventanas, paneles solares, techos y más. Hasta 1.500 m²/hora, sin andamios ni riesgos. Presupuesto gratis.',
+  keywords: 'limpieza con drones Uruguay, drones de limpieza, limpieza de fachadas con drones, limpieza de paneles solares Uruguay, limpieza de ventanas en altura, limpieza industrial con drones, ósmosis inversa Uruguay',
 }
 
 export default function Limpieza() {
@@ -13,11 +16,12 @@ export default function Limpieza() {
     <>
       <Navbar />
       <ScrollAnimator />
+      <TrustBar />
 
       {/* Hero */}
       <section className="titulo-limpieza-seccion">
         <div className="titulo-limpieza-fondo">
-          <h2 className="titulo-limpieza">Limpieza con Drones</h2>
+          <h1 className="titulo-limpieza">Limpieza con Drones en Uruguay</h1>
         </div>
       </section>
 
@@ -122,6 +126,7 @@ export default function Limpieza() {
           <h2>¿Necesitás limpiar tu edificio o estructura?</h2>
           <p>Contáctanos hoy y recibí un presupuesto personalizado sin compromiso.</p>
           <a href="https://wa.me/59894010550" className="btn-contacto" target="_blank" rel="noopener noreferrer">
+            <WhatsAppIcon />
             Solicitar Presupuesto Gratis
           </a>
         </div>

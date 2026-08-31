@@ -48,8 +48,10 @@ export default function Navbar() {
       <nav className="nav" aria-label="Navegación principal">
         <Link href="/">Inicio</Link>
         <Link href="/sobre-nosotros">Sobre Nosotros</Link>
-        <Link href="/limpieza">Servicios</Link>
+        <Link href="/limpieza">Limpieza</Link>
+        <Link href="/fumigacion">Fumigación</Link>
         <Link href="/#trabajos-realizados">Trabajos</Link>
+        <Link href="/#preguntas-frecuentes">FAQ</Link>
         <a
           href="https://wa.me/59894010550"
           target="_blank"
@@ -68,8 +70,10 @@ export default function Navbar() {
       >
         <Link href="/" onClick={close}>Inicio</Link>
         <Link href="/sobre-nosotros" onClick={close}>Sobre Nosotros</Link>
-        <Link href="/limpieza" onClick={close}>Servicios</Link>
+        <Link href="/limpieza" onClick={close}>Limpieza</Link>
+        <Link href="/fumigacion" onClick={close}>Fumigación</Link>
         <Link href="/#trabajos-realizados" onClick={close}>Trabajos</Link>
+        <Link href="/#preguntas-frecuentes" onClick={close}>Preguntas Frecuentes</Link>
         <a
           href="https://wa.me/59894010550"
           target="_blank"
