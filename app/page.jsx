@@ -1,12 +1,18 @@
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import ScrollAnimator from '@/components/ScrollAnimator'
-import LazyVideo from '@/components/LazyVideo'
+import VideoCarousel from '@/components/VideoCarousel'
 import TrustBar from '@/components/TrustBar'
 import FAQSection from '@/components/FAQSection'
 import { WhatsAppIcon, ArrowIcon } from '@/components/Icons'
 import Link from 'next/link'
 import Image from 'next/image'
+
+const videosTrabajos = [
+  { src: '/videoFasano1.mp4', title: 'HiDrone - Limpieza con Drones en Fasano 1' },
+  { src: '/videoFasano2.mp4', title: 'HiDrone - Limpieza con Drones en Fasano 2' },
+  { src: '/videoFasano3.mp4', title: 'HiDrone - Limpieza con Drones en Fasano 3' },
+]
 
 const trabajos = [
   {
@@ -214,7 +220,7 @@ export default function Home() {
         <div className="video-section animado">
           <h3>Nuestro Trabajo en Acción</h3>
           <p>Mirá cómo operamos nuestros drones en proyectos reales</p>
-          <LazyVideo src="/videoFasano.mp4" title="HiDrone - Limpieza con Drones en Fasano" />
+          <VideoCarousel videos={videosTrabajos} />
         </div>
 
         <div className="trabajos-cta animado">
