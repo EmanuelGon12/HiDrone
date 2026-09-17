@@ -6,9 +6,9 @@ import { WhatsAppIcon } from '@/components/Icons'
 import Image from 'next/image'
 
 export const metadata = {
-  title: 'Limpieza con Drones en Uruguay | Fachadas, Vidrios y Paneles Solares | HiDrone',
-  description: 'Limpieza con drones en Uruguay certificada por DINACIA: fachadas, ventanas, paneles solares, techos y más. Hasta 1.500 m²/hora, sin andamios ni riesgos. Presupuesto gratis.',
-  keywords: 'limpieza con drones Uruguay, drones de limpieza, limpieza de fachadas con drones, limpieza de paneles solares Uruguay, limpieza de ventanas en altura, limpieza industrial con drones, ósmosis inversa Uruguay',
+  title: 'Limpieza de Edificios en Altura con Drones | Fachadas y Vidrios | HiDrone',
+  description: 'Drone de limpieza para edificios en Uruguay: limpieza en alturas de fachadas, ventanas y paneles solares sin andamios ni cuerdas. Certificados por DINACIA. Presupuesto gratis.',
+  keywords: 'drone de limpieza, limpieza de edificios, limpieza de edificios en altura, limpieza en alturas, limpieza en altura sin andamios, limpieza con drones Uruguay, drones de limpieza, limpieza de fachadas con drones, limpieza de paneles solares Uruguay, limpieza de ventanas en altura, limpieza industrial con drones, ósmosis inversa Uruguay',
 }
 
 export default function Limpieza() {
@@ -21,7 +21,10 @@ export default function Limpieza() {
       {/* Hero */}
       <section className="titulo-limpieza-seccion">
         <div className="titulo-limpieza-fondo">
-          <h1 className="titulo-limpieza">Limpieza con Drones en Uruguay</h1>
+          <h1 className="titulo-limpieza">Limpieza de Edificios en Altura con Drones</h1>
+          <p className="subtitulo-limpieza">
+            El drone de limpieza que reemplaza andamios y cuerdas: limpieza en alturas de fachadas, vidrios y paneles solares en todo Uruguay.
+          </p>
         </div>
       </section>
 
@@ -30,7 +33,7 @@ export default function Limpieza() {
         <div className="contenido">
           <h2>¿Cómo Funciona?</h2>
           <p>
-            En Hidrone, revolucionamos la limpieza de superficies con tecnología de drones equipados con sistemas de filtración de agua de última generación. Utilizamos técnicas avanzadas para eliminar la suciedad, grasa, manchas, moho y más, adaptando cada proceso a las necesidades específicas de cada tipo de superficie. Nuestra agua purificada, tratada mediante <strong>ósmosis inversa</strong>, puede aplicarse tanto con baja como con alta presión, garantizando un acabado impecable.
+            HiDrone es el drone de limpieza que reemplaza los métodos tradicionales de limpieza en alturas. En vez de andamios, cuerdas o brazos hidráulicos, usamos drones equipados con sistemas de filtración de agua de última generación para la limpieza de edificios, fachadas y estructuras a más de 150 metros de altura. Utilizamos técnicas avanzadas para eliminar la suciedad, grasa, manchas, moho y más, adaptando cada proceso a las necesidades específicas de cada tipo de superficie. Nuestra agua purificada, tratada mediante <strong>ósmosis inversa</strong>, puede aplicarse tanto con baja como con alta presión, garantizando un acabado impecable.
           </p>
         </div>
         <div className="imagen">
@@ -40,7 +43,7 @@ export default function Limpieza() {
 
       {/* Íconos ventajas */}
       <section className="iconos-limpieza animado">
-        <p className="descripcion-limpieza">Realizamos limpieza eficiente de superficies, con ventajas como las siguientes:</p>
+        <p className="descripcion-limpieza">Como drone de limpieza para edificios, ofrecemos limpieza en alturas eficiente para todo tipo de superficies, con ventajas como las siguientes:</p>
         <div className="puntos-clave">
           <div className="punto">
             <div className="icon-limpieza">
@@ -82,6 +85,19 @@ export default function Limpieza() {
         </div>
       </section>
 
+      {/* Limpieza de edificios en altura */}
+      <section className="como-funciona animado" id="edificios" style={{ marginTop: '40px' }}>
+        <div className="contenido">
+          <h2>Limpieza de Edificios en Altura</h2>
+          <p>
+            La limpieza en alturas tradicional depende de andamios, cuerdas y personal trabajando a decenas de metros del suelo: es lenta, cara y de alto riesgo laboral. Como drone de limpieza especializado en edificios, HiDrone resuelve la limpieza de edificios en altura sin montar estructuras ni exponer personas: cubrimos torres de oficinas, edificios residenciales, hoteles y complejos comerciales en todo Uruguay, con el mismo resultado impecable en una fracción del tiempo.
+          </p>
+        </div>
+        <div className="imagen">
+          <Image src="/imagenes/fachadaEdificio.webp" alt="Limpieza de edificios en altura con drones" width={600} height={400} loading="lazy" style={{ width: '100%', borderRadius: '12px', maxHeight: '400px', objectFit: 'cover' }} />
+        </div>
+      </section>
+
       {/* Ósmosis */}
       <section className="como-funciona animado" style={{ marginTop: '40px' }}>
         <div className="imagen">
@@ -98,19 +114,19 @@ export default function Limpieza() {
       {/* Grid de superficies */}
       <section className="tres-contenedores" id="superficies">
         {[
-          { img: '/imagenes/ventanas-vidrio-edificio_53876-42549.avif', titulo: 'Ventanas', desc: 'Nuestros drones son ideales para limpiar ventanas de edificios altos, alcanzando áreas difíciles y peligrosas de manera rápida, segura y eficiente.' },
-          { img: '/imagenes/fachada-residencial.webp', titulo: 'Fachadas', desc: 'Nuestros drones mantienen fachadas de edificios de forma ágil y segura, alcanzando zonas altas sin complicaciones.' },
-          { img: '/imagenes/eolico.webp', titulo: 'Molinos Eólicos', desc: 'Un dron de limpieza es la opción más eficiente y segura para mantener molinos eólicos, reduciendo riesgos humanos.' },
-          { img: '/imagenes/solar-panel.webp', titulo: 'Paneles Solares', desc: 'Los drones garantizan mayor eficiencia en la producción de energía eliminando suciedad y residuos de los paneles.' },
-          { img: '/imagenes/cruise-1578528_1280.webp', titulo: 'Cruceros', desc: 'Limpieza rápida y segura de áreas difíciles de alcanzar, manteniendo la higiene sin interrumpir las operaciones.' },
-          { img: '/imagenes/estadio.webp', titulo: 'Estadios', desc: 'Solución rápida y eficiente para estadios, llegando a áreas de difícil acceso sin necesidad de equipos pesados.' },
-          { img: '/imagenes/lujoso-barco-motor-que-navega-aguas-cristalinas_1135235-2597.avif', titulo: 'Yates', desc: 'Limpieza eficiente de yates, alcanzando zonas exteriores con un acabado impecable en menos tiempo.' },
-          { img: '/imagenes/depositphotos_11501233-stock-photo-blank-billboard.jpg', titulo: 'Carteles Publicitarios', desc: 'Limpiamos carteles publicitarios elevados asegurando una apariencia llamativa y libre de suciedad.' },
-          { img: '/imagenes/depositphotos_17673207-stock-photo-house-roof.jpg', titulo: 'Techos', desc: 'Limpieza eficiente de techos llegando a zonas difíciles, garantizando una superficie libre de suciedad y residuos.' },
-        ].map(({ img, titulo, desc }) => (
+          { img: '/imagenes/ventanas-vidrio-edificio_53876-42549.avif', titulo: 'Ventanas', alt: 'Limpieza de ventanas en altura con drones', desc: 'Nuestros drones son ideales para limpiar ventanas de edificios altos, alcanzando áreas difíciles y peligrosas de manera rápida, segura y eficiente.' },
+          { img: '/imagenes/fachada-residencial.webp', titulo: 'Fachadas', alt: 'Limpieza de fachadas de edificios con drones', desc: 'Nuestros drones mantienen fachadas de edificios de forma ágil y segura, alcanzando zonas altas sin complicaciones.' },
+          { img: '/imagenes/eolico.webp', titulo: 'Molinos Eólicos', alt: 'Drone de limpieza en molinos eólicos', desc: 'Un dron de limpieza es la opción más eficiente y segura para mantener molinos eólicos, reduciendo riesgos humanos.' },
+          { img: '/imagenes/solar-panel.webp', titulo: 'Paneles Solares', alt: 'Limpieza de paneles solares con drones', desc: 'Los drones garantizan mayor eficiencia en la producción de energía eliminando suciedad y residuos de los paneles.' },
+          { img: '/imagenes/cruise-1578528_1280.webp', titulo: 'Cruceros', alt: 'Limpieza de cruceros y embarcaciones con drones', desc: 'Limpieza rápida y segura de áreas difíciles de alcanzar, manteniendo la higiene sin interrumpir las operaciones.' },
+          { img: '/imagenes/estadio.webp', titulo: 'Estadios', alt: 'Limpieza en altura de estadios con drones', desc: 'Solución rápida y eficiente para estadios, llegando a áreas de difícil acceso sin necesidad de equipos pesados.' },
+          { img: '/imagenes/lujoso-barco-motor-que-navega-aguas-cristalinas_1135235-2597.avif', titulo: 'Yates', alt: 'Limpieza de yates con drones', desc: 'Limpieza eficiente de yates, alcanzando zonas exteriores con un acabado impecable en menos tiempo.' },
+          { img: '/imagenes/depositphotos_11501233-stock-photo-blank-billboard.jpg', titulo: 'Carteles Publicitarios', alt: 'Limpieza en altura de carteles publicitarios con drones', desc: 'Limpiamos carteles publicitarios elevados asegurando una apariencia llamativa y libre de suciedad.' },
+          { img: '/imagenes/depositphotos_17673207-stock-photo-house-roof.jpg', titulo: 'Techos', alt: 'Limpieza de techos de edificios con drones', desc: 'Limpieza eficiente de techos llegando a zonas difíciles, garantizando una superficie libre de suciedad y residuos.' },
+        ].map(({ img, titulo, alt, desc }) => (
           <div key={titulo} className="contenedor-limp animado">
             <div className="imagen-limp">
-              <Image src={img} alt={titulo} width={400} height={200} loading="lazy" style={{ width: '100%', height: '200px', objectFit: 'cover' }} />
+              <Image src={img} alt={alt} width={400} height={200} loading="lazy" style={{ width: '100%', height: '200px', objectFit: 'cover' }} />
             </div>
             <div className="texto-limp">
               <h3>{titulo}</h3>
@@ -123,8 +139,8 @@ export default function Limpieza() {
       {/* CTA final */}
       <section className="cta-strip">
         <div className="cta-strip-content">
-          <h2>¿Necesitás limpiar tu edificio o estructura?</h2>
-          <p>Contáctanos hoy y recibí un presupuesto personalizado sin compromiso.</p>
+          <h2>¿Necesitás un drone de limpieza para tu edificio?</h2>
+          <p>Contáctanos hoy y recibí un presupuesto personalizado sin compromiso para tu limpieza en altura.</p>
           <a href="https://wa.me/59894010550" className="btn-contacto" target="_blank" rel="noopener noreferrer">
             <WhatsAppIcon />
             Solicitar Presupuesto Gratis

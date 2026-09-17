@@ -9,6 +9,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 90px;
 }
 
 body {
@@ -1135,11 +1136,14 @@ img {
   background-size: cover;
   background-position: center;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   opacity: 0;
   transform: scale(1.06);
   animation: fadeZoomIn 2s ease forwards;
+  text-align: center;
+  padding: 0 24px;
 }
 
 .titulo-limpieza-fondo::after {
@@ -1151,7 +1155,7 @@ img {
 
 .titulo-limpieza {
   position: relative;
-  font-size: 4rem;
+  font-size: 3.4rem;
   text-align: center;
   font-family: var(--font-raleway), sans-serif;
   font-weight: 800;
@@ -1163,6 +1167,19 @@ img {
   transform: translateY(20px);
   animation: fadeSlideIn 0.8s ease forwards;
   animation-delay: 1s;
+}
+
+.subtitulo-limpieza {
+  position: relative;
+  z-index: 1;
+  max-width: 620px;
+  font-size: 1.15em;
+  color: #e0e0e0;
+  margin-top: 14px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeSlideIn 0.8s ease forwards;
+  animation-delay: 1.2s;
 }
 
 @keyframes fadeZoomIn {
@@ -1178,10 +1195,13 @@ img {
 
 @media (max-width: 768px) {
   .titulo-limpieza-seccion {
-    height: 300px;
+    height: 340px;
   }
   .titulo-limpieza {
     font-size: 2.2rem;
+  }
+  .subtitulo-limpieza {
+    font-size: 1em;
   }
 }
 

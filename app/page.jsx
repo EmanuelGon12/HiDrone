@@ -65,7 +65,7 @@ export default function Home() {
         />
         <div className="hero-text">
           <h1>Limpieza aérea con drones de última generación</h1>
-          <p>Más limpio, más seguro, más rápido — certificados por DINACIA</p>
+          <p>Drone de limpieza para edificios en altura: más limpio, más seguro, más rápido — certificados por DINACIA</p>
           <div className="hero-ctas">
             <a href="https://wa.me/59894010550" className="btn-contacto" target="_blank" rel="noopener noreferrer">
               <WhatsAppIcon />
@@ -107,7 +107,7 @@ export default function Home() {
       <section className="presentacion animado">
         <div className="presentacion-content">
           <h2>Innovación en Limpieza Aérea con Drones</h2>
-          <p>En HiDrone, llevamos la excelencia en limpieza aérea a otro nivel con drones de última generación, certificados por DINACIA. Nuestros equipos alcanzan alturas de más de 150 metros y acceden a áreas difíciles o peligrosas, garantizando resultados eficientes, seguros y respetuosos con el medio ambiente.</p>
+          <p>En HiDrone, llevamos la excelencia en la limpieza de edificios a otro nivel con nuestro drone de limpieza de última generación, certificado por DINACIA. Nuestros equipos alcanzan alturas de más de 150 metros y acceden a áreas difíciles o peligrosas, resolviendo la limpieza en alturas de forma eficiente, segura y respetuosa con el medio ambiente.</p>
           <div className="presentacion-ctas">
             <Link href="/sobre-nosotros" className="btn-cta">
               Conoce Más
@@ -122,7 +122,7 @@ export default function Home() {
         <div className="presentacion-image">
           <Image
             src="/imagenes/fotoDrone5.webp"
-            alt="Dron HiDrone en operación"
+            alt="Drone de limpieza HiDrone en operación de limpieza en altura"
             width={600}
             height={400}
             loading="lazy"
@@ -138,15 +138,15 @@ export default function Home() {
         <div className="servicio servicio--full">
           <Image
             src="/imagenes/fotoDrone4.webp"
-            alt="Servicio de Limpieza con Drones"
+            alt="Limpieza de edificios en altura con drones"
             width={800}
             height={320}
             loading="lazy"
             sizes="(max-width: 768px) 100vw, 800px"
             style={{ width: '100%', height: '280px', objectFit: 'cover', borderRadius: '8px', marginBottom: '20px' }}
           />
-          <h3>Limpieza con Drones</h3>
-          <p>Ofrecemos servicios de limpieza aérea para fachadas, ventanas, paneles solares, techos, embarcaciones y más. Nuestros drones equipados con tecnología de ósmosis inversa garantizan una limpieza impecable, segura y eficiente en cualquier tipo de superficie.</p>
+          <h3>Limpieza de Edificios con Drones</h3>
+          <p>Ofrecemos limpieza en alturas para edificios, fachadas, ventanas, paneles solares, techos, embarcaciones y más. Nuestros drones equipados con tecnología de ósmosis inversa garantizan una limpieza impecable, segura y eficiente en cualquier tipo de superficie.</p>
           <div className="servicio-features">
             <span>✔ Hasta 1.500 m²/hora</span>
             <span>✔ Acceso a alturas de +150m</span>
@@ -158,8 +158,8 @@ export default function Home() {
 
       {/* Beneficios: por qué elegir drones */}
       <section className="beneficios-section animado">
-        <h2>¿Por qué elegir limpieza con drones?</h2>
-        <p>Frente a los métodos tradicionales de andamios, cuerdas o hidrolavado manual, la limpieza con drones de HiDrone es más rápida, más segura y más cuidadosa con tus superficies.</p>
+        <h2>¿Por qué elegir un drone de limpieza?</h2>
+        <p>Frente a la limpieza en alturas tradicional con andamios, cuerdas o hidrolavado manual, la limpieza de edificios con drones de HiDrone es más rápida, más segura y más cuidadosa con tus superficies.</p>
         <div className="beneficios-stats">
           <div className="beneficio-stat">
             <div className="valor">1.500 m²</div>

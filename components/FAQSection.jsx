@@ -7,12 +7,12 @@ const faqs = [
     a: 'Sí. Operamos con drones registrados y pilotos con licencia RPAS habilitados por DINACIA (Dirección Nacional de Aviación Civil e Infraestructura Aeronáutica), cumpliendo toda la normativa vigente para vuelos comerciales en Uruguay. Cada trabajo se realiza dentro del marco legal correspondiente.',
   },
   {
-    q: '¿Qué es la limpieza con drones y cómo funciona?',
-    a: 'Es un método de limpieza aérea que usa drones equipados con sistemas de agua purificada por ósmosis inversa para lavar fachadas, vidrios, paneles solares y otras superficies en altura, sin necesidad de andamios, cuerdas ni grúas.',
+    q: '¿Qué es un drone de limpieza y cómo funciona?',
+    a: 'Un drone de limpieza es un dron equipado con sistemas de agua purificada por ósmosis inversa que permite lavar fachadas, vidrios, paneles solares y otras superficies en altura de forma remota, sin necesidad de andamios, cuerdas ni grúas.',
   },
   {
-    q: '¿Por qué usar drones de limpieza en vez de métodos tradicionales?',
-    a: 'Los drones eliminan el riesgo de trabajos en altura, cubren hasta 1.500 m² por hora (varias veces más rápido que un equipo con cuerdas o andamios), no requieren montaje de estructuras y usan agua tratada por ósmosis inversa que no deja residuos ni manchas, cuidando la superficie y el medio ambiente.',
+    q: '¿En qué se diferencia la limpieza de edificios con drones de la limpieza en alturas tradicional?',
+    a: 'La limpieza en alturas tradicional depende de andamios, cuerdas o brazos hidráulicos y personal trabajando físicamente en el edificio. La limpieza de edificios con drones elimina esa exposición al riesgo, no requiere montar estructuras, cubre hasta 1.500 m² por hora (varias veces más rápido) y usa agua tratada por ósmosis inversa que no deja residuos ni manchas, cuidando la superficie y el medio ambiente.',
   },
   {
     q: '¿Es segura la limpieza con drones en fachadas y alturas?',
@@ -60,8 +60,8 @@ export default function FAQSection() {
       />
       <div className="faq-header">
         <span className="faq-eyebrow">Preguntas Frecuentes</span>
-        <h2>Todo sobre la limpieza con drones en Uruguay</h2>
-        <p>Resolvé tus dudas sobre nuestro servicio, la seguridad y la certificación DINACIA.</p>
+        <h2>Todo sobre el drone de limpieza y la limpieza en alturas en Uruguay</h2>
+        <p>Resolvé tus dudas sobre la limpieza de edificios con drones, la seguridad y la certificación DINACIA.</p>
       </div>
 
       <div className="faq-list">

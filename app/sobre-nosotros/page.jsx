@@ -9,7 +9,7 @@ import Image from 'next/image'
 export const metadata = {
   title: 'Sobre Nosotros | Empresa de Drones Certificada DINACIA | HiDrone Uruguay',
   description: 'Conocé a HiDrone, empresa pionera en limpieza con drones en Uruguay, certificada por DINACIA. Operamos en todo el país desde Punta del Este con pilotos habilitados.',
-  keywords: 'empresa de drones Uruguay, HiDrone Uruguay, drones certificados DINACIA, limpieza con drones Punta del Este',
+  keywords: 'empresa de drones Uruguay, empresa de limpieza en altura Uruguay, drone de limpieza, limpieza de edificios, HiDrone Uruguay, drones certificados DINACIA, limpieza con drones Punta del Este',
 }
 
 export default function SobreNosotros() {
@@ -24,8 +24,8 @@ export default function SobreNosotros() {
       <section className="quienes-somos animado">
         <div className="texto">
           <p>
-            En HiDrone, somos pioneros en la industria de limpieza con drones en Uruguay.<br /><br />
-            Fundados en Punta del Este, operamos en todo el país, ofreciendo soluciones innovadoras, seguras y respetuosas con el medio ambiente. Nuestro compromiso es brindar servicios de limpieza eficientes, rápidos y accesibles, superando los métodos tradicionales en calidad y sustentabilidad.
+            En HiDrone, somos pioneros en la industria del drone de limpieza en Uruguay, especializados en limpieza de edificios y limpieza en alturas.<br /><br />
+            Fundados en Punta del Este, operamos en todo el país, ofreciendo soluciones innovadoras, seguras y respetuosas con el medio ambiente. Nuestro compromiso es brindar servicios de limpieza eficientes, rápidos y accesibles, superando los métodos tradicionales de limpieza en altura en calidad y sustentabilidad.
           </p>
           <Link href="/limpieza" className="btn-cta" style={{ marginTop: '20px' }}>
             Ver nuestros servicios

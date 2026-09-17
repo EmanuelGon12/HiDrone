@@ -7,12 +7,12 @@ export default function Footer() {
       <div className="footer-container">
         <div className="footer-column">
           <h4>Sobre Nosotros</h4>
-          <p>Empresa de drones certificada por DINACIA, especializada en limpieza aérea en Uruguay. Trabajos 100% autorizados, comprometidos con la innovación y el cuidado del medio ambiente.</p>
+          <p>Drone de limpieza certificado por DINACIA, especializado en limpieza de edificios y limpieza en alturas en Uruguay. Trabajos 100% autorizados, comprometidos con la innovación y el cuidado del medio ambiente.</p>
         </div>
         <div className="footer-column">
           <h4>Servicios</h4>
           <ul>
-            <li><Link href="/limpieza">Limpieza con Drones</Link></li>
+            <li><Link href="/limpieza#edificios">Limpieza de Edificios en Altura</Link></li>
             <li><Link href="/limpieza#superficies">Fachadas y Ventanas</Link></li>
             <li><Link href="/limpieza#superficies">Paneles Solares</Link></li>
             <li><Link href="/limpieza#superficies">Embarcaciones</Link></li>
