@@ -34,8 +34,8 @@ export default function SobreNosotros() {
         </div>
         <div className="imagen">
           <Image
-            src="/imagenes/fotoDrone2.webp"
-            alt="Drone HiDrone en operación"
+            src="/imagenes/real-fasano-operador.webp"
+            alt="Equipo de HiDrone operando el drone de limpieza en Fasano"
             width={600}
             height={400}
             loading="lazy"
@@ -56,8 +56,8 @@ export default function SobreNosotros() {
         </div>
         <div className="imagen">
           <Image
-            src="/imagenes/fotoDrone5.webp"
-            alt="Drone HiDrone y equipo"
+            src="/imagenes/real-north-5.webp"
+            alt="Drone HiDrone en el predio de North antes de la operación"
             width={600}
             height={400}
             loading="lazy"

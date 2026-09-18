@@ -37,7 +37,7 @@ export default function Limpieza() {
           </p>
         </div>
         <div className="imagen">
-          <Image src="/imagenes/embarcacion.webp" alt="Drone en operación" width={600} height={400} loading="lazy" style={{ width: '100%', borderRadius: '12px', maxHeight: '400px', objectFit: 'cover' }} />
+          <Image src="/imagenes/real-north-1.webp" alt="Drone HiDrone en operación de limpieza en North" width={600} height={400} loading="lazy" style={{ width: '100%', borderRadius: '12px', maxHeight: '400px', objectFit: 'cover' }} />
         </div>
       </section>
 
@@ -94,7 +94,7 @@ export default function Limpieza() {
           </p>
         </div>
         <div className="imagen">
-          <Image src="/imagenes/fachadaEdificio.webp" alt="Limpieza de edificios en altura con drones" width={600} height={400} loading="lazy" style={{ width: '100%', borderRadius: '12px', maxHeight: '400px', objectFit: 'cover' }} />
+          <Image src="/imagenes/real-fasano-3.webp" alt="Fachada de edificio impecable tras la limpieza en altura con drones" width={600} height={400} loading="lazy" style={{ width: '100%', borderRadius: '12px', maxHeight: '400px', objectFit: 'cover' }} />
         </div>
       </section>
 

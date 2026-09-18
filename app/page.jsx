@@ -12,44 +12,46 @@ const videosTrabajos = [
   { src: '/videoFasano1.mp4', title: 'HiDrone - Limpieza con Drones en Fasano 1' },
   { src: '/videoFasano2.mp4', title: 'HiDrone - Limpieza con Drones en Fasano 2' },
   { src: '/videoFasano3.mp4', title: 'HiDrone - Limpieza con Drones en Fasano 3' },
+  { src: '/videoNorth1.mp4', title: 'HiDrone - Limpieza con Drones en North 1' },
+  { src: '/videoNorth2.mp4', title: 'HiDrone - Limpieza con Drones en North 2' },
 ]
 
 const trabajos = [
   {
-    img: '/imagenes/fachada-residencial.webp',
-    titulo: 'Fachada Residencial',
-    desc: 'Limpieza completa de fachada en edificio residencial de Punta del Este.',
+    img: '/imagenes/real-fasano-1.webp',
+    titulo: 'Fasano - Fachada en Altura',
+    desc: 'Limpieza de fachada de madera en altura, sin andamios ni cuerdas.',
     tag: 'Fachadas',
   },
   {
-    img: '/imagenes/ventanas-vidrio-edificio_53876-42549.avif',
-    titulo: 'Torre de Oficinas',
-    desc: 'Tratamiento de ventanas y vidriería exterior en torre corporativa.',
+    img: '/imagenes/real-fasano-2.webp',
+    titulo: 'Fasano - Limpieza de Precisión',
+    desc: 'Tratamiento de fachada exterior en esquina de difícil acceso.',
+    tag: 'Fachadas',
+  },
+  {
+    img: '/imagenes/real-fasano-3.webp',
+    titulo: 'Fasano - Resultado Final',
+    desc: 'Fachada de madera impecable tras el proceso de limpieza con drones.',
+    tag: 'Resultado',
+  },
+  {
+    img: '/imagenes/real-north-1.webp',
+    titulo: 'North - Fachada y Vidrios',
+    desc: 'Limpieza de fachada metálica y vidrios en altura en complejo industrial.',
+    tag: 'Industrial',
+  },
+  {
+    img: '/imagenes/real-north-2.webp',
+    titulo: 'North - Ventanales en Altura',
+    desc: 'Limpieza de grandes ventanales de doble altura sin interrumpir la operación.',
     tag: 'Ventanas',
   },
   {
-    img: '/imagenes/solar-panel.webp',
-    titulo: 'Parque Solar',
-    desc: 'Limpieza de paneles solares con ósmosis inversa para maximizar eficiencia.',
-    tag: 'Paneles Solares',
-  },
-  {
-    img: '/imagenes/eolico.webp',
-    titulo: 'Parque Eólico',
-    desc: 'Mantenimiento de aspas de aerogeneradores de forma segura y eficiente.',
-    tag: 'Eólico',
-  },
-  {
-    img: '/imagenes/lujoso-barco-motor-que-navega-aguas-cristalinas_1135235-2597.avif',
-    titulo: 'Embarcación de Lujo',
-    desc: 'Limpieza exterior de yate con acabado impecable sin interferir en operaciones.',
-    tag: 'Embarcaciones',
-  },
-  {
-    img: '/imagenes/embarcacion.webp',
-    titulo: 'Limpieza Industrial',
-    desc: 'Operación de limpieza en estructura industrial de difícil acceso.',
-    tag: 'Industrial',
+    img: '/imagenes/real-north-3.webp',
+    titulo: 'North - Limpieza Completa',
+    desc: 'Cobertura total de fachada frontal con acabado uniforme.',
+    tag: 'Fachadas',
   },
 ]
 
@@ -127,13 +129,13 @@ export default function Home() {
         </div>
         <div className="presentacion-image">
           <Image
-            src="/imagenes/fotoDrone5.webp"
-            alt="Drone de limpieza HiDrone en operación de limpieza en altura"
+            src="/imagenes/real-fasano-operador.webp"
+            alt="Operador de HiDrone controlando el drone de limpieza en Fasano"
             width={600}
             height={400}
             loading="lazy"
             sizes="(max-width: 900px) 100vw, 50vw"
-            style={{ width: '100%', height: 'auto', borderRadius: '12px' }}
+            style={{ width: '100%', height: '420px', objectFit: 'cover', objectPosition: 'top', borderRadius: '12px' }}
           />
         </div>
       </section>
@@ -143,13 +145,13 @@ export default function Home() {
       <div className="seccion-servicios animado">
         <div className="servicio servicio--full">
           <Image
-            src="/imagenes/fotoDrone4.webp"
-            alt="Limpieza de edificios en altura con drones"
+            src="/imagenes/real-north-5.webp"
+            alt="Drone HiDrone realizando limpieza de edificios en altura en North"
             width={800}
             height={320}
             loading="lazy"
             sizes="(max-width: 768px) 100vw, 800px"
-            style={{ width: '100%', height: '280px', objectFit: 'cover', borderRadius: '8px', marginBottom: '20px' }}
+            style={{ width: '100%', height: '380px', objectFit: 'cover', objectPosition: 'center 70%', borderRadius: '8px', marginBottom: '20px' }}
           />
           <h3>Limpieza de Edificios con Drones</h3>
           <p>Ofrecemos limpieza en alturas para edificios, fachadas, ventanas, paneles solares, techos, embarcaciones y más. Nuestros drones equipados con tecnología de ósmosis inversa garantizan una limpieza impecable, segura y eficiente en cualquier tipo de superficie.</p>
@@ -188,9 +190,9 @@ export default function Home() {
 
       {/* Trabajos Realizados */}
       <section className="trabajos-section" id="trabajos-realizados">
-        {/*<div className="trabajos-header animado">
-          <h2>Que podemos limpiar?</h2>
-          <p>Proyectos completados con éxito en todo Uruguay</p>
+        <div className="trabajos-header animado">
+          <h2>¿Qué podemos limpiar?</h2>
+          <p>Fotos reales de proyectos completados en Uruguay</p>
         </div>
 
         <div className="galeria-trabajos">
@@ -214,7 +216,7 @@ export default function Home() {
               </div>
             </div>
           ))}
-        </div>*/}
+        </div>
 
         {/* Video Section */}
         <div className="video-section animado">

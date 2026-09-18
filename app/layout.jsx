@@ -40,13 +40,13 @@ export const metadata = {
     siteName: 'HiDrone Uruguay',
     type: 'website',
     locale: 'es_UY',
-    images: [{ url: 'https://hidroneuy.com/imagenes/fotoDrone1.png' }],
+    images: [{ url: 'https://hidroneuy.com/imagenes/real-fasano-operador.webp' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'HiDrone | Drone de Limpieza para Edificios y Limpieza en Altura',
     description: 'Limpieza en altura de edificios, fachadas y paneles solares con drones. Segura, rápida y ecológica. Certificados por DINACIA.',
-    images: ['https://hidroneuy.com/imagenes/fotoDrone1.png'],
+    images: ['https://hidroneuy.com/imagenes/real-fasano-operador.webp'],
   },
   alternates: {
     canonical: 'https://hidroneuy.com/',
@@ -62,7 +62,7 @@ const localBusinessJsonLd = {
   url: 'https://hidroneuy.com/',
   telephone: '+59894010550',
   email: 'info@hidroneuy.com',
-  image: 'https://hidroneuy.com/imagenes/fotoDrone1.png',
+  image: 'https://hidroneuy.com/imagenes/real-fasano-operador.webp',
   areaServed: {
     '@type': 'Country',
     name: 'Uruguay',
